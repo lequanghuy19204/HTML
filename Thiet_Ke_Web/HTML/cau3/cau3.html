@@ -1,0 +1,72 @@
+<!-- User
+câu 3:
+a) Tạo chuỗi JSON chứa thông tin về 5 ô tô cho thuê, bao gồm các thuộc tính thông tin phù hợp như: loại xe, hình ảnh, số chỗ, giá thuê...
+
+b) Sử dụng vòng lặp for để in ra các đối tượng trên ra trang html (cau3.html), thông tin mỗi đối tượng để trong 1 thẻ div -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin ô tô cho thuê</title>
+</head>
+<body>
+
+<div id="carInfo"></div>
+
+<script>
+  // Chuỗi JSON chứa thông tin về các ô tô cho thuê
+  var cars = [
+    {
+      "loai_xe": "Sedan",
+      "hinh_anh": "link_to_car_image_1.jpg",
+      "so_cho": 5,
+      "gia_thue": 500000
+    },
+    {
+      "loai_xe": "SUV",
+      "hinh_anh": "link_to_car_image_2.jpg",
+      "so_cho": 7,
+      "gia_thue": 700000
+    },
+    {
+      "loai_xe": "Hatchback",
+      "hinh_anh": "link_to_car_image_3.jpg",
+      "so_cho": 5,
+      "gia_thue": 450000
+    },
+    {
+      "loai_xe": "Crossover",
+      "hinh_anh": "link_to_car_image_4.jpg",
+      "so_cho": 5,
+      "gia_thue": 600000
+    },
+    {
+      "loai_xe": "Convertible",
+      "hinh_anh": "link_to_car_image_5.jpg",
+      "so_cho": 4,
+      "gia_thue": 800000
+    }
+  ];
+
+  var carInfoDiv = document.getElementById("carInfo");
+
+  // Sử dụng vòng lặp để in ra thông tin từng ô tô vào thẻ div
+  for (var i = 0; i < cars.length; i++) {
+    var car = cars[i];
+    var carDiv = document.createElement("div");
+
+    var carInfo = `
+      <h2>${car.loai_xe}</h2>
+      <img src="${car.hinh_anh}" alt="${car.loai_xe}">
+      <p>Số chỗ: ${car.so_cho}</p>
+      <p>Giá thuê: ${car.gia_thue} VNĐ/ngày</p>
+    `;
+
+    carDiv.innerHTML = carInfo;
+    carInfoDiv.appendChild(carDiv);
+  }
+</script>
+
+</body>
+</html>

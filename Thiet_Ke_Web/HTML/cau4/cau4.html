@@ -1,0 +1,116 @@
+<!-- câu 4: 
+Kết hợp những mã đã viết ở các câu trên, chỉnh sửa nó để tạo thành một Website hoàn thiện hơn, có tính thẩm mỹ, website có thiết kế đáp ứng và được lưu trong file cau4.html
+
+a) Website sử dụng header, menu trong câu 1 để làm phần đầu của trang, bổ sung thêm 1 slogan bên dưới tên Website
+
+b) Sử dụng ess "feature" ở câu 2 để tạo một khối thông tin quảng cáo, khi người dùng di chuột
+
+qua thì màu nền và màu viền thay đổi, phần chữ chuyển sang in nghiêng
+
+c) Sử dụng mã JS hiển thị 5 thông tin về ô tô cho thuê đã đã khai báo trong câu 3, sử dụng class "item", sử dụng flexbox để cấu hình cho 4 "item" này xuất hiện trên 2 hàng, mỗi hàng 2 "item" d) Thiết kế thêm phần chân trang cho website, trong đó có thông tin về họ tên, lớp và mã sinh viên
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car Rental Website</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Inline styles for demonstration purposes */
+    .feature:hover {
+    background-color: #ffcc00; /* Màu nền khi di chuột qua */
+    border-color: #ff6600; /* Màu viền khi di chuột qua */
+    font-style: italic; /* In nghiêng chữ khi di chuột qua */
+    }
+    .footer {
+    text-align: center;
+    margin-top: 30px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Car Rental</h1>
+<p>Slogan của website</p>
+<nav>
+    <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Dịch vụ</a></li>
+    <li><a href="#">Đặt xe</a></li>
+    <li><a href="#">Liên hệ</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="feature">Thông tin quảng cáo</div>
+
+<main class="container">
+<div class="car-info" id="carInfo"></div>
+</main>
+
+<footer class="footer">
+<p>Họ tên: [Tên của bạn]</p>
+<p>Lớp: [Tên lớp của bạn]</p>
+<p>MSSV: [Mã số sinh viên của bạn]</p>
+</footer>
+
+<script>
+// Chuỗi JSON chứa thông tin về các ô tô cho thuê
+var cars = [
+{
+      "loai_xe": "Sedan",
+      "hinh_anh": "link_to_car_image_1.jpg",
+      "so_cho": 5,
+      "gia_thue": 500000
+    },
+    {
+      "loai_xe": "SUV",
+      "hinh_anh": "link_to_car_image_2.jpg",
+      "so_cho": 7,
+      "gia_thue": 700000
+    },
+    {
+      "loai_xe": "Hatchback",
+      "hinh_anh": "link_to_car_image_3.jpg",
+      "so_cho": 5,
+      "gia_thue": 450000
+    },
+    {
+      "loai_xe": "Crossover",
+      "hinh_anh": "link_to_car_image_4.jpg",
+      "so_cho": 5,
+      "gia_thue": 600000
+    },
+    {
+      "loai_xe": "Convertible",
+      "hinh_anh": "link_to_car_image_5.jpg",
+      "so_cho": 4,
+      "gia_thue": 800000
+    }
+];
+
+var carInfoDiv = document.getElementById("carInfo");
+
+// Sử dụng vòng lặp để hiển thị thông tin ô tô
+for (var i = 0; i < cars.length; i++) {
+    var car = cars[i];
+    var carDiv = document.createElement("div");
+    carDiv.className = "item";
+
+    var carInfo = `
+    <h2>${car.loai_xe}</h2>
+    <img src="${car.hinh_anh}" alt="${car.loai_xe}">
+    <p>Số chỗ: ${car.so_cho}</p>
+    <p>Giá thuê: ${car.gia_thue} VNĐ/ngày</p>
+    `;
+
+    carDiv.innerHTML = carInfo;
+    carInfoDiv.appendChild(carDiv);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!-- câu 1
+a) Tạo một trang HTML (caul.html) cho một website thuê ô tô, tên của website là "Car
+Rental", tạo ra một header cho website với các thẻ phù hợp.
+ 
+b) Tạo ra một menu phù hợp cho website bằng cách sử dụng các thẻ <ul> <li>, đặt menu ở bên trong header nói trên
+
+c) Thêm một bài viết giới thiệu về 1 ô tô đang muốn cho thuê, trong đó có sử dụng các thẻ <h1> <img>, <table> và các thẻ khác (nếu cần) -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Car Rental</title>
+      <style>
+        /* Styling for demonstration purposes */
+        header {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px 0;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          text-align: center;
+        }
+        ul li {
+          display: inline-block;
+          margin-right: 20px;
+        }
+        h1 {
+          text-align: center;
+        }
+        table {
+          margin: 0 auto;
+          border-collapse: collapse;
+        }
+        table, th, td {
+          border: 1px solid black;
+          padding: 8px;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          height: auto;
+        }
+      </style>
+    </head>
+    <body>
+    
+    <header>
+      <h1>Car Rental</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Đặt xe</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <article>
+        <h1>Giới thiệu về ô tô cho thuê</h1>
+        <img src="link_to_your_car_image.jpg" alt="Car Image">
+        <p>Mô tả về ô tô và thông tin chi tiết.</p>
+        
+        <h2>Thông số kỹ thuật</h2>
+        <table>
+          <tr>
+            <th>Thông số</th>
+            <th>Chi tiết</th>
+          </tr>
+          <tr>
+            <td>Động cơ</td>
+            <td>Thông tin động cơ</td>
+          </tr>
+          <tr>
+            <td>Nhiên liệu</td>
+            <td>Thông tin loại nhiên liệu</td>
+          </tr>
+          <!-- Thêm các thông số khác tương tự -->
+        </table>
+      </article>
+    </main>
+    
+    </body>
+    </html>
+    
