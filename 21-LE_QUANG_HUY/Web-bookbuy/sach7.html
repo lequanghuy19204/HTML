@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <title>Người Tối Giản</title>
+</head>
+
+<body>
+    <div class="app">
+        <!-- navBar -->
+        <nav id="navbar" class="nav">
+            <i onclick="handleDarkMode()" id="toggleMobile" class="fas fa-moon fa-moon_mobile"></i>
+
+            <img onclick="window.location.href='index.html'" src="./assets/img/logo-new.png" alt="logo" class="logo" style="cursor: pointer" />
+            <div class="nav__menu">
+                <a id="navHome" href="./index.html">TRANG CHỦ</a>
+                <a id="navIntroduction" href="./profile.html">THÔNG TIN</a>
+                <a id="navShowtimes" href="./showtimes.html">TRUYỆN TRANH</a>
+                <a id="navNews" href="./news.html">SẮP XUẤT BẢN</a>
+                <a id="navPrice" href="./price.html">ƯU ĐÃI</a>
+                <a id="navPrice" href="./sitemap.html">SITEMAP</a>
+
+                <div class="nav__right">
+                    <div id="navRightUserInfor" style="display: flex; align-items: center; cursor: pointer"></div>
+                    <a href="login.html" id="loginNav">ĐĂNG NHẬP</a>
+                    <div class="gio-hang">
+                      <a href="cart.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a>
+                    </div>
+                </div>
+            </div>
+            <div id="navMobie" class="nav__mobie">
+                <div style="display: flex; flex-direction: column; align-items: center" onclick="window.location.replace('./profile.html')">
+                    <a id="navMobieUserName" style=" margin-top: 15px; font-size: 18px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Thành viên__</a>
+                </div>
+                <a href="./index.html">TRANG CHỦ</a>
+                <a href="./profile.html">GIỚI THIỆU</a>
+                <a href="./showtimes.html">TRUYỆN TRANH</a>
+                <a href="./news.html">SẮP XUẤT BẢN</a>
+                <a href="./price.html">ƯU ĐÃI</a>
+                <a id="navMobieAuth" href="./login.html">ĐĂNG NHẬP</a>
+            </div>
+            <div id="hamburger" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+<!-- homePage -->
+<div class="home">
+        <div id="slider" style="align-items: center; justify-content: center; text-align: center;">
+          <ul id="slideWrap ">
+            <li><img src="./assets/img/3b0cd6b3-3099-4c43-988f-595472a4488e.jpg" alt="" /></li>
+            <li><img src="./assets/img/33c79415-fe9b-4cbf-81b7-b091b5f2bbfa.jpg" alt="" /></li>
+            <li><img src="./assets/img/95ea3a7e-8d5c-4046-b1ad-676412ed9cd2.jpg" alt="" /></li>
+            <li><img src="./assets/img/9210ad11-08b5-4fae-a5fe-7556343ca9e9.jpg" alt="" /></li>
+          </ul>
+          <img src="./assets/svg/arrow.svg" alt="arrow" id="prev" />
+          <img src="./assets/svg/arrow.svg" alt="arrow" id="next" />
+        </div>
+
+<!-- product -->
+<section class="product">
+    <div class="container">
+        <div class="product-content row">
+            <div class="product-content-left">
+                <div class="product-content-left-img">
+                    <img src="./assets/img/sach7.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-content-right">
+                <div class="product-content-right-product-name">
+                    <h1>Người Tối Giản</h1>
+                    <p> <span>Phạm Quỳnh Giang </span> (Tác giả)</p>
+                </div>
+                <div class="product-content-right-product-price">
+                    <p style="color: #FE642E; font-size: 24px;">84.000<sup>đ</sup></p>
+                    
+                </div>
+                <p>Tình trạng: <span style="color: red;">Sắp có hàng</span></p>
+                <div class="quantity">
+                    
+                    <p style="font-weight: bold;">Số lượng: </p>
+                    <input type="numbers" min="1" value="1">
+                    <p style="color: red;">Vui lòng chọn số lượng</p>
+                </div>
+                <div class="product-content-right-product-button-gio">
+                  <button><p>THÊM VÀO GIỎ HÀNG</p></button>
+                </div>
+                <div class="product-content-right-product-button-dat">
+                    <button onclick="datTruoc()"><p>ĐẶT TRƯỚC</p></button>
+                </div>
+                <div class="product-content-right-product-icon">
+                    <p>Gọi đặt hàng: <span style="color: #FE642E;">(028) 3820 7153</span> hoặc <span style="color: #FE642E;">0933 109 009</span>
+                    </p>
+                </div>
+                <div class="product-content-right-product-sale">
+                  <p style="font-weight: bold;">Thông tin & Khuyến mãi</p>
+                  <p>Đổi trả hàng trong vòng 7 ngày</p>
+                  <p>Freeship nội thành Sài Gòn từ <span>150.000đ*</span>.</p>
+                  <p>Freeship toàn quốc từ <span>250.000đ</span></p>
+                </div>
+                
+            </div>
+        </div>
+    <div class="contents">
+      <div style="font-size: 22px; font-weight: bold; margin: 20px 10px;">
+        <p>Giới thiệu sản phẩm</p>
+      </div>
+      <p>&nbsp</p>
+      <div style="color: #FE642E; font-weight: bold; font-size: 25px; text-align: center; margin-bottom: 20px;">
+        <p> Người Tối Giản</p>
+      </div>
+      <div >
+        <p>Người Tối Giản sẽ truyền cảm hứng cho bạn trẻ vận dụng phong cách sống tối giản và tư duy tối giản như một công cụ hữu hiệu để giải phóng bản thân khỏi những kẻ mang tên Bộn Bề. Điểm đích mà tác giả muốn trỏ đến đó là sự tự do về tinh thần. Việc hướng về một phong cách sống tối giản và rèn luyện tư duy tối giản không chỉ giúp bạn thoát khỏi những áp lực về công việc, những lo toan về tài chính, mà còn giúp bạn tận hưởng từng giây, từng phút của cuộc sống này.</p><br>
+        <p>Tác giả Phạm Quỳnh Giang không chỉ coi lối sống tối giản là việc bạn có bao nhiều đồ đạc, những vật hiện thân bên ngoài mà cô tìm đến việc nắm bắt cái thần thái của những người tối giản _ một sự tự do tuyệt đối từ chính bên trong bản thân mỗi con người, “đó là những người có một cái tâm tĩnh lặng, một cái đầu biết tư duy mạch lạc về những thứ mình cần, và một đôi tay dám vứt bỏ những thứ thừa thãi trong cuộc sống của mình. Từ tư duy ấy mới khiến không gian sống của người tối giản không thể tinh gọn hơn và họ không còn sợ mất bất cứ điều gì, không còn bị ràng buộc vào bất cứ điều gì. Nói cách khác, đó là những con người tự do, tự do tuyệt đối.”</p><br>
+        <p>Tác giả: <br>
+            Phạm Quỳnh Giang (1983) từng là giảng viên trường Đại học Khoa học Xã hội và Nhân văn Thành phố Hồ Chí Minh và từng giữ cương vị Hiệu phó trường Quốc tế Song ngữ UK Academy Gia Lai. Tác giả hoạt động tích cực trong cộng đồng, là người sáng lập Câu lạc bộ Sách vàng truyền cảm hứng đọc sách cho thanh niên Việt Nam, là người sáng lập và là Chủ tịch Hội Nữ doanh nhân WLIN UP Gia Lai và Hội Nữ doanh nhân WLIN INSPIRE Sài Gòn (thuộc Mạng lưới Nữ lãnh đạo Quốc tế).</p><br>
+        <p>Người Tối Giản được xuất bản tại Hàn Quốc với tựa đề Hãy đánh thức Người Tối Giản trong bạn, và xuất bản phiên bản tiếng Anh với tựa đề The Minimalist who is not in favour Minimalism (Người Tối Giản không theo chủ nghĩa tối giản). Bên cạnh đó, cô còn là tác giả cuốn sách Vietnam: Paradise or Hell? (tiếng Anh) và dịch nhiều tựa sách khác như: Người Hàn Quốc là ai, Bộ ba xuất chúng, 1cm đến hạnh phúc, Đừng cố làm người tốt trong mắt tất cả mọi người…</p><br>
+        <p>Trích đoạn nội dung: <br>
+            Còn trong cuốn sách Người tối giản này, bạn sẽ thấy tôi tiếp cận theo một cách hoàn toàn khác, trong đó nghiêng nhiều về tối giản hơn là tối thiểu, và nghiêng nhiều về mặt tinh thần bên trong (tư duy tối giản) hơn là mặt biểu hiện bên ngoài (lối sống tối giản). Trong hình dung của tôi, tinh thần cơ bản nhất của tư duy tối giản là đặt sinh mệnh con người vào vị trí trung tâm, xem sinh mệnh con người là một khởi điểm đẹp đẽ nhất, một sự “tối thiểu hóa” hay “tối giản hóa” hoàn hảo nhất. Ở trạng thái ấy, chúng ta sẽ cảm nhận được sự hòa hợp tuyệt đối với vũ trụ. Mà để làm được điều này, cần loại bỏ dần những dấu ấn xã hội trong tâm trí của chúng ta.</p><br>
+        <p>Tóm lại, các cuốn sách nói về chủ nghĩa tối giản cho đến nay hầu như tiếp cận từ bên ngoài vào, tức là dọn dẹp căn phòng ngoài đời thực. Còn cuốn sách này của tôi tiếp cận từ bên trong ra, tức là dọn dẹp căn phòng trong tâm trí. Người Tối Giản trong cuốn sách này không phải là người theo lối sống tối giản, mà là người có tư duy tối giản. Với cách tiếp cận này, chúng ta có thể tìm đến “cảnh giới” của bức tranh xanh lè và cục đá hình chữ C như tôi đã nói ở trên mà không phải buông bỏ hết vật chất, không phải ngừng kiếm tiền và sống khổ hạnh như các nhà sư. Bởi vì sao? Vì lối sống tối giản chỉ là một sợi dây để vươn đến tư duy tối giản. Tức là sao? Xin mời đọc tiếp!</p><br>
+      </div>
+    </div>
+    </div>
+</section>
+</div>
+
+<!-- footer -->
+<footer class="footer" id="footer">
+    <div class="footer__navList">
+      <span onclick="window.location.replace('./index.html')"
+        >TRANG CHỦ</span
+      >
+      <span onclick="window.location.replace('./showtimes.html')"
+        >TRUYỆN TRANH</span
+      >
+      <span onclick="window.location.replace('./news.html')"
+        >SẮP XUẤT BẢN</span
+      >
+      <span onclick="window.location.replace('./price.html')">ƯU ĐÃI</span>
+    </div>
+    <div class="footer__download">
+      <img src="./assets/img/downloadAppStore.png" alt="img" />
+      <img src="./assets/img/downloadGooglePlay.png" alt="img" />
+      <img
+        src="./assets/img/logo_da_thong_bao.png"
+        width="180px"
+        alt="img"
+      />
+    </div>
+    <p class="footer__text">
+      Mua sách online tại Bookbuy, bạn được tận hưởng chính sách hỗ trợ miễn phí đổi trả hàng, giao hàng nhanh – tận nơi – miễn phí*, thanh toán linh hoạt - an toàn, đặc biệt giảm thêm trên giá bán khi sử dụng BBxu giúp bạn mua sách online giá 0đ!<br />
+      Chỉ với 3 cú click chuột, chưa bao giờ trải nghiệm mua sách online lại dễ chịu và nhẹ nhàng như vậy. Còn chần chờ gì nữa, đặt mua ngay những tựa sách hay cùng hàng ngàn sản phẩm chất lượng khác tại Bookbuy.vn<br />
+    </p>
+    <div class="footer__logo">
+      <img src="./assets/img/logo-new.png" width="100px" alt="logo" />
+      <img
+        src="./assets/img/Facebook.png"
+        onclick="window.open()"
+        alt="logo"
+      />
+      <img src="./assets/img/Gmail.png" alt="logo" />
+    </div>
+  </footer>
+
+<script>
+  function datTruoc(){
+    alert('Sắp có hàng, vui lòng đợi!');
+  }
+</script>
+  <script src="./js/nav.js"></script>
+  <script src="./js/autoSlide.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/profile.js"></script>
+</body>
+</html>

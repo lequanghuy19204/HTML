@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .flex-container{
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+    .header{
+        background-color: coral;
+        flex: 1 100%;
+    }
+    .box{
+        background-color: cornflowerblue;
+        flex: 3 0px;
+        text-align: left;
+    }
+    .aside1{
+        background-color: moccasin;
+        flex: 1 0px;
+    }
+    .aside2{
+        background-color: violet;
+        flex: 1 0px;
+    }
+    .footer{
+        background-color: lightgreen;
+        flex: 1 100%;
+    }
+    @media screen and (max-width: 800px) {
+        
+    }
+</style>
+<body>
+    <div class="flex-container">
+        <div class="header">Header</div>
+        <div class="aside1">Aside 1</div>
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit labore tenetur voluptatum repellat dolore architecto maiores eum ipsam eos doloremque delectus ullam dignissimos molestias magni consequuntur a quia, nisi animi.</div>
+        <div class="aside2">Aside 2</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(helveticaneue.woff2);
+}
+
+@font-face {
+    font-family: HelveticaNeueBold;
+    src: url(helveticaneuebold.woff2);
+}
+
+@font-face {
+    font-family: HelveticaNeueLight;
+    src: url(helveticaneuelight.woff2);
+}

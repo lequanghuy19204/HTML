@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 0px;
+        margin: 0px;
+        background-color: rgb(106, 65, 46);
+    }
+    .container, .header, .image, .gioithieu{
+        display: grid;
+    }
+    .container{
+        grid-auto-columns: auto;
+    }
+    .header{
+        grid-template-columns: 70% 30%;
+        padding:20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: darkgrey;
+    }
+    .header1{
+        font-size: 30px;
+    }
+    .header2{
+        font-size: 26px;
+    }
+    .image{
+        grid-template-columns: 40% 58%;
+        padding: 10px;
+        gap:20px;
+    }
+    .anh, .about{
+        background-color: darkgrey;
+        padding: 3px;
+    }
+    .anh img{
+        width: 100%;
+        height: 100%;
+    }
+    .tieude{
+        background-image: linear-gradient(aliceblue, dimgrey);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: azure;
+        font-weight: bold;
+    }
+    .gioithieu{
+        grid-template-columns:  auto auto auto;
+        padding: 20px;
+        gap: 30px;
+    }
+    .anhmon img{
+        width: 100%;
+    }
+    .gioithieu1{
+        background-color: darkgrey;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header1" >Thiết kế Web</div>
+            <div class="header2">HTML-CSS-JavaScript</div>
+        </div>
+        <div class="image">
+            <div class="anh"><img src="picture\web_design_menu.jpg" alt="d"></div>
+            <div class="about">
+                <div class="tieude">About Web design</div>
+                <div class="noidung">Lorem ipsum, dolor sit amet consetetur adipsicing elit. Est repudiande porro facilis, ea dolore dignissimos blanditiis, dolorem sed dolore sed repellat dicta consectetur soluta nam sommodi, ipsa quod alias ullam odio.
+                <br><br>
+                <a href="#">Continue reading</a>
+                </div>
+            </div>
+        </div>
+        <div class="gioithieu">
+            <div class="gioithieu1">
+                <div class="tieude">HTML</div>
+                <div class="anhmon"><img src="picture\html.jpg" alt=""></div>
+                <div> dsfuhdsuf ef edijfg ef edfi jeifj efeifjei fjweff jefj eif f eikjikf  feikfj ike feikfg dsf geffje dfhueihui fefhe uifhehehdfu  fdefea</div>
+                <br><br>
+                <div class="tieude">More...</div>
+            </div>
+            <div class="gioithieu1">
+                <div class="tieude">CSS</div>
+                <div class="anhmon"><img src="picture\css.jpg" alt=""></div>
+                <div> dsfuhdsuf ef edijfg ef edfi jeifj efeifjei fjweff jefj eif f eikjikf  feikfj ike feikfg dsf geffje dfhueihui fefhe uifhehehdfu  fdefea</div>
+                <br><br>
+                <div class="tieude">More...</div>
+            </div>
+            <div class="gioithieu1">
+                <div class="tieude">JavaScript</div>
+                <div class="anhmon"><img src="picture\java.jpg" alt=""></div>
+                <div> dsfuhdsuf ef edijfg ef edfi jeifj efeifjei fjweff jefj eif f eikjikf  feikfj ike feikfg dsf geffje dfhueihui fefhe uifhehehdfu  fdefea</div>
+                <br><br>
+                <div class="tieude">More...</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

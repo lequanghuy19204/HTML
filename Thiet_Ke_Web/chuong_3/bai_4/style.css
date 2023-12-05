@@ -1,0 +1,53 @@
+body{
+    font-family: "Time New Roman", serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #333;
+    background-image: url(picture/anh-anime-boy-dep-nhat_101905549.jpg);
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+header h1{
+    font-size: 40px;
+    color: white
+}
+header img{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.introduction, .skills, .project, .contact {
+    background-color: #cdc2c2;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.skills ul, .projects ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.projects li, .projects h3 {
+    margin-bottom: 10px;
+}
+
+.contact a {
+    text-decoration: underline;
+    color: #0077b5;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+

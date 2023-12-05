@@ -1,0 +1,46 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.myheader { 
+    grid-area: h; 
+    background-color: darkgray;
+    height: 150px;
+}
+.mynavigation { 
+    grid-area: n; 
+    background-color: blue;
+    height: 75px;  
+}
+.mycontent { 
+    grid-area: c;
+    background-color: darkgreen;
+    height: 300px;
+}
+.mysidebar { 
+    grid-area: s; 
+    background-color: coral;
+    height: 300px;
+}
+.myfooter { 
+    grid-area: f; 
+    background-color: brown;
+    height: 75px;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'h h h h'
+    'n n n n'
+    'c c c s'
+    'f f f f';
+    gap: 2px;
+    background-color: #000000;
+    padding: 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.grid-container > div {
+    text-align: center;
+    color: aliceblue;
+    padding: 20px 0;
+}

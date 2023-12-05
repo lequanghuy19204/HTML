@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="firstname">Họ đệm:</label> 
+            <input type="text" name="firstname" id="firstname" required>
+        </p>
+        <p>
+            <label for="lastname">Tên:</label>
+            <input type="text" name="lastname" id="lastname" required>
+        </p>
+        <p>
+            <label for="">Giới tính:</label>
+            <input type="radio" name="gender" id="male" value="male" required checked>
+            <label for="male">Nam</label>
+            <input type="radio" name="gender" id="female" value="female" required>
+            <label for="female">Nữ</label>
+        </p>
+        <p>
+            <label for="faculty">Khoa:</label>
+            <select name="faculty" id="faculty">
+                <option value="Viện TM&KTQT">Viện TM&KTQT</option>
+                <option value="Khoa học máy tính">Khoa học máy tính</option>
+                <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                <option value="Thương mại điện tử">Thương mại điện tử</option>
+            </select>
+        </p>
+        <p>
+            <label for="img">Ảnh đại diện:</label>
+            <input type="file" name="img" id="img" >
+        </p>
+        <p>
+            <label for="">Đã học lập trình:</label>
+            <input type="checkbox" name="code_learn" id="C" value="C">
+            <label for="C">C</label>
+            <input type="checkbox" name="code_learn" id="Java" value="Java">
+            <label for="Java">Java</label>
+            <input type="checkbox" name="code_learn" id="Python" value="Python">
+            <label for="Python">Python</label>
+        </p>
+        <p>
+            <label for="">Giới thiệu bản thân:</label><br>
+            <textarea name="introduce" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Xác nhận">
+            <input type="reset" value="Xóa">
+        </p>
+    </form>
+</body>
+</html>

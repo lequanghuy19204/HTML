@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <p>
+        Please complete the following form to register with our site:
+    </p>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="username">User Name:</label></td>
+                <td><input type="text" name="username" id="username" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="text" name="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><label for="">Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><label for="hear_select">How did you hear about us?: </label></td>
+                <td>
+                    <select name="hear_select" id="hear_select" placeholder="Select answer">
+                        <option value="" selected>Select answer</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="agree">Please select this box if you wish <br>
+                    to be added to our mailing list <br>
+                    (We will not pass on your details to any third party)</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="agree" id="agree">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register now"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* Thiết lập màu nền và màu văn bản */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 10px;
+    padding: 50px;
+}
+
+/* Bố cục trang */
+header {
+    text-align: center;
+    background-color: #663e4e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ảnh cá nhân */
+.profile-picture img {
+    max-width: 80%;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(26, 4, 4, 0.2);
+}
+
+/* Thông tin cá nhân */
+.profile-info {
+    margin-left: 100px;
+}
+
+/* Kiểu font chữ */
+h1 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Danh sách liên hệ */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}

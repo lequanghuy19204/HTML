@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .flex-container{
+        display: flex;
+        flex-flow: row wrap;
+        text-align: left;
+        color: black;
+    }
+    .header{
+        flex: 2 100%;
+        background-color: rgb(53, 46, 46);
+        color: white;
+        text-align: center;
+    }
+    .home{
+       flex: 1 100%;
+       display: flex;
+       margin: 1px 0px;
+       background-color: rgb(61, 54, 54);
+    }
+    .home1{
+        text-align: center;
+        background-color: darkgray;
+        padding: 10px;
+        margin: 5px;
+        flex: auto;
+    }
+    .content1{
+        flex: 4 60%;
+        background-color: darkgray;
+        padding: 5px;
+    }
+    .content2{
+        flex: 4 35%;
+        background-color: white;
+        padding: 5px;
+    }
+    .footer{
+        flex: 10 100%;
+        padding: 5px;
+        margin: 5px 0px;
+        background-color: darkgray;
+    }
+    @media screen and (max-width: 600px) {
+        .header{order: 1;}
+        .content1{
+            flex: 4 100%;
+            order: 2;
+        }
+        .content2{
+            flex: 4 100%;
+            order: 3;
+        }
+        .home{order: 4;}
+        .footer{order: 5;}
+    }
+</style>
+<body>
+    <div class="flex-container">
+        <div class="header"><h1>Document Heading</h1></div>
+        <div class="home">
+            <div class="home1">Home</div>
+            <div class="home1">About</div>
+            <div class="home1">Blog</div>
+            <div class="home1">Careers</div>
+            <div class="home1">Contact Us</div>
+        </div>
+        <div class="content1">
+            <h2>This is the heading of the main section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptates, ullam doloribus dolor neque quae suscipit doloremque odit cumque perspiciatis ratione praesentium recusandae velit maxime soluta error blanditiis sint aut.</p>
+        </div>
+        <div class="content2">
+            <h4>Aside heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptates, ullam doloribus dolor neque quae suscipit doloremque odit cumque perspiciatis ratione praesentium recusandae velit maxime soluta error blanditiis sint aut.</p>
+        </div>
+        <div class="footer">Copyright @ 2022 <a href="#">My Site</a></div>
+    </div>
+</body>
+</html>

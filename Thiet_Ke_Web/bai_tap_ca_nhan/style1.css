@@ -1,0 +1,210 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+}
+
+.menu li:hover .sub-menu {
+    display: block;
+}
+
+/* Logo styles */
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Search bar styles */
+.others input[type="text"] {
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Section styles */
+.section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+/* Carousel styles */
+#Slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.aspect-ratio-169 {
+    display: flex;
+    transition: all 1s ease-in-out;
+}
+
+.aspect-ratio-169 img {
+    width: 100%;
+    height: auto;
+}
+
+.dot-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Book category styles */
+.cartegory {
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cartegory h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cartegory-sach-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cartegory-sach-item ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.cartegory-sach-item ul li {
+    margin-right: 20px;
+}
+
+.cartegory-sach-item ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.cartegory-sach-item ul li a:hover {
+    color: #EB7E6C;
+}
+
+.cartegory-sach-item-contents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cartegory-sach-item-content {
+    width: calc(25% - 10px);
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tensach {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.tacgia {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.gia {
+    font-size: 14px;
+    color: #EB7E6C;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu .sub-menu {
+        position: static;
+        display: none;
+    }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <title>GIỎ HÀNG</title>
+</head>
+
+<body>
+    <div class="app">
+        <!-- navBar -->
+        <nav id="navbar" class="nav">
+            <i onclick="handleDarkMode()" id="toggleMobile" class="fas fa-moon fa-moon_mobile"></i>
+
+            <img onclick="window.location.href='index.html'" src="./assets/img/logo-new.png" alt="logo" class="logo" style="cursor: pointer" />
+            <div class="nav__menu">
+                <a id="navHome" href="./index.html">TRANG CHỦ</a>
+                <a id="navIntroduction" href="./profile.html">THÔNG TIN</a>
+                <a id="navShowtimes" href="./showtimes.html">TRUYỆN TRANH</a>
+                <a id="navNews" href="./news.html">SẮP XUẤT BẢN</a>
+                <a id="navPrice" href="./price.html">ƯU ĐÃI</a>
+                <a id="navPrice" href="./sitemap.html">SITEMAP</a>
+
+                <div class="nav__right">
+                    <div id="navRightUserInfor" style="display: flex; align-items: center; cursor: pointer"></div>
+                    <a href="login.html" id="loginNav">ĐĂNG NHẬP</a>
+                    <div class="gio-hang">
+                      <a href="cart.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a>
+                    </div>
+                </div>
+            </div>
+            <div id="navMobie" class="nav__mobie">
+                <div style="display: flex; flex-direction: column; align-items: center" onclick="window.location.replace('./profile.html')">
+                    <a id="navMobieUserName" style=" margin-top: 15px; font-size: 18px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Thành viên__</a>
+                </div>
+                <a href="./index.html">TRANG CHỦ</a>
+                <a href="./profile.html">THÔNG TIN</a>
+                <a href="./showtimes.html">TRUYỆN TRANH</a>
+                <a href="./news.html">SẮP XUẤT BẢN</a>
+                <a href="./price.html">ƯU ĐÃI</a>
+                <a href="./sitemap.html">SITEMAP</a>
+                <a href="login.html" id="navMobieAuth">ĐĂNG NHẬP</a>
+            </div>
+            <div id="hamburger" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+<!-- address -->
+<div class="container-address">
+    <div class="cart-top-wrap">
+      <div class="cart-top">
+        <div class="cart-top-cart cart-top-item" style="border: 1px solid #998181;">
+            <i class="fas fa-shopping-cart" style="color: #998181;"></i>
+        </div>
+        <div class="cart-top-adress cart-top-item" style="border: 1px solid #F15E25;">
+            <i class="fas fa-map-marker-alt" style="color: #F15E25;"></i>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="comfirm">
+<div class="container-comfirm">
+    <div class="container-comfirm-top2 row">
+        <div class="container-comfirm-left">
+          <div class="container-comfirm-transport">
+            <div class="container-comfirm-text">
+              <h2>ĐỊA CHỈ GIAO HÀNG</h2>
+            </div>
+              <div class="container-comfirm-content">
+                <div>
+                  <label for="nameRegisterInput">Họ tên <span>*</span></label>
+                  <div class="register__form_block_khac">
+                    <img src="./assets/svg/person.svg" alt="" />
+                    <input required placeholder="Nhập họ tên" type="text" name="name" id="nameRegisterInput" />
+                  </div>
+                </div>
+                <div>
+                  <label for="emailRegisterInput">Email nhận hàng <span>*</span></label>
+                  <div class="register__form_block_khac">
+                    <img src="./assets/svg/email.svg" alt="" />
+                    <input required placeholder="Nhập email" type="email" name="email" id="emailRegisterInput" />
+                  </div>
+                </div>
+                <div>
+                  <label for="countryRegisterInput">Quốc gia <span>*</span></label>
+                  <div class="register__form_block_khac">
+                    <i style="color: #A3A3A3; padding: 5px;" class="fa-solid fa-map-location-dot"></i>
+                    <select name="country" id="countryRegisterInput">
+                      <option value="" selected disabled>Chọn Quốc Gia</option>
+                      <option value="Vietnam">Việt Nam</option>
+                      <option value="Thailan">Thai Lan</option>
+                      <option value="Trungquoc">Trung Quốc</option>
+                      <option value="Other">Quốc gia khác</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="provinceRegisterInput">Tỉnh/Thành phố <span>*</span></label>
+                  <div class="register__form_block_khac">
+                    <i style="color: #A3A3A3; padding: 5px;" class="fa-solid fa-map-location-dot"></i>
+                    <select name="province" id="provinceRegisterInput">
+                        <option value="" selected disabled>Chọn Tỉnh/Thành Phố</option>  
+                      <option value="Hanoi">Hà Nội</option>
+                      <option value="HCMC">TP.HCM</option>
+                      <option value="namdinh">Nam Định</option>
+                      <option value="danang">Đà Nẵng</option>
+                    </select>
+                  </div>
+                </div>
+                <div >
+                  <label for="districtRegisterInput">Quận/Huyện <span>*</span></label>
+                  <div class="register__form_block_khac">
+                    <i style="color: #A3A3A3; padding: 5px;" class="fa-solid fa-map-location-dot"></i>
+                    <select name="district" id="districtRegisterInput">
+                      <option value="" selected disabled>Chọn quận/huyện</option>
+                      <option value="District1">Quận 1</option>
+                      <option value="District2">Quận 2</option>
+                      <option value="District3">Quận 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div >
+                  <label for="addressRegisterInput">Địa chỉ nhà <span>*</span></label>
+                  <div class="register__form_block_khac">
+                    <i style="color: #A3A3A3; padding: 5px;" class="fa-solid fa-map-location-dot"></i>
+                    <input required placeholder="Nhập địa chỉ nhà" type="text" name="address" id="addressRegisterInput" class="addressphone"/>
+                  </div>
+                </div>
+                <div>
+                  <label for="phoneRegisterInput">Số điện thoại</label>
+                  <div class="register__form_block_khac">
+                    <img src="./assets/svg/phone.svg" alt="" />
+                    <input required placeholder="Số điện thoại" type="tel" name="phone" id="phoneRegisterInput" class="addressphone"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container-comfirm-right">
+          <div class="container-comfirm-transport">
+            <div class="container-comfirm-text">
+                <h2>PHƯƠNG THỨC VẬN CHUYỂN</h2>
+            </div>
+            <div class="container-comfirm-item">
+                <input type="radio" id="chuyenthuong" name="chuyen">
+                <label for="chuyenthuong">Chuyển thường</label><br>
+                <input type="radio" id="chuyennhanh" name="chuyen">
+                <label for="chuyennhanh">Chuyển nhanh</label><br>
+            </div>
+        </div>
+        <div class="container-comfirm-transport">
+            <div class="container-comfirm-text">
+                <h2>PHƯƠNG THỨC THANH TOÁN</h2>
+            </div>
+            <div class="container-comfirm-item">
+                <input type="radio" id="nganhang" name="pay">
+                <label for="nganhang"> Chuyển khoản ngân hàng </label><br>
+                <div class="container-comfirm-item-img">
+                    <img src="./assets/img/QR.png" alt="">
+                    <p>TK: MBBank LE QUANG HUY</p>
+                </div>
+                <input type="radio" id="tienmat" name="pay">
+                <label for="tienmat">Thanh toán tiền mặt khi nhận hàng (COD)</label><br>
+            </div>
+        </div>
+            <div class="container-comfirm-transport">
+                <table>
+                    <tr>
+                        <th colspan="2">Đơn hàng</th>
+                    </tr>
+                    <tr>
+                        <td>Tổng sản phẩm:</td>
+                        <td><p id="totalProducts">2</p></td>
+                    </tr>
+                    <tr>
+                        <td>Tổng tiền:</td>
+                        <td><p id="totalAmount">84.000</p></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cart-content-right-button">
+                <button onclick="datMua()">ĐẶT MUA</button>
+              </div>
+        </div>
+    </div>
+</div>
+</div>  
+
+<!-- footer -->
+<footer class="footer" id="footer">
+    <div class="footer__navList">
+      <span onclick="window.location.replace('./index.html')"
+        >TRANG CHỦ</span
+      >
+      <span onclick="window.location.replace('./showtimes.html')"
+        >TRUYỆN TRANH</span
+      >
+      <span onclick="window.location.replace('./news.html')"
+        >SẮP XUẤT BẢN</span
+      >
+      <span onclick="window.location.replace('./price.html')">ƯU ĐÃI</span>
+    </div>
+    <div class="footer__download">
+      <img src="./assets/img/downloadAppStore.png" alt="img" />
+      <img src="./assets/img/downloadGooglePlay.png" alt="img" />
+      <img
+        src="./assets/img/logo_da_thong_bao.png"
+        width="180px"
+        alt="img"
+      />
+    </div>
+    <p class="footer__text">
+      Mua sách online tại Bookbuy, bạn được tận hưởng chính sách hỗ trợ miễn phí đổi trả hàng, giao hàng nhanh – tận nơi – miễn phí*, thanh toán linh hoạt - an toàn, đặc biệt giảm thêm trên giá bán khi sử dụng BBxu giúp bạn mua sách online giá 0đ!<br />
+      Chỉ với 3 cú click chuột, chưa bao giờ trải nghiệm mua sách online lại dễ chịu và nhẹ nhàng như vậy. Còn chần chờ gì nữa, đặt mua ngay những tựa sách hay cùng hàng ngàn sản phẩm chất lượng khác tại Bookbuy.vn<br />
+    </p>
+    <div class="footer__logo">
+      <img src="./assets/img/logo-new.png" width="100px" alt="logo" />
+      <img
+        src="./assets/img/Facebook.png"
+        onclick="window.open()"
+        alt="logo"
+      />
+      <img src="./assets/img/Gmail.png" alt="logo" />
+    </div>
+  </footer>
+
+<script>
+  function datMua(){
+    window.location.href = 'index.html'
+    alert('Bạn đã mua thành công!');
+  }
+</script>
+<script>
+    // Lấy dữ liệu từ Local Storage
+  const totalProducts = localStorage.getItem("totalProducts");
+  const totalAmount = localStorage.getItem("totalAmount");
+
+  var totalProductsElement = document.querySelector(".container-comfirm-transport table tr:nth-child(2) td p");
+  totalProductsElement.textContent = totalProducts;
+
+  var totalAmountElement = document.querySelector(".container-comfirm-transport table tr:nth-child(3) td p");
+  totalAmountElement.textContent = totalAmount.toLocaleString("vi-VN") ;
+
+
+
+</script>
+<script>
+
+  window.onload = function () {
+            // Lấy dữ liệu từ Local Storage
+            const totalProducts = localStorage.getItem("totalProducts1");
+            const totalAmount = localStorage.getItem("totalAmount1");
+                document.getElementById("totalProducts").innerText = totalProducts;
+                document.getElementById("totalAmount").innerText = totalAmount ;
+              
+        }
+</script>
+
+
+<script src="./js/nav.js"></script>
+<script src="./js/autoSlide.js"></script>
+<script src="./js/cart.js"></script>
+<script src="./js/profile.js"></script>
+</body>
+</html>

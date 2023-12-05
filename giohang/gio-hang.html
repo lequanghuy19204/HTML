@@ -1,0 +1,1564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+    <meta name="author" content="Bookbuy.vn" />
+    <meta name="copyright" content="Copyright (c) Bookbuy.vn" />
+    <title>Giỏ hàng</title>
+
+    <meta name='description' content='Danh sách hàng hoá đã mua' />
+    <meta name='keywords' content='Danh sách hàng hoá đã mua' />
+
+    <meta name='robots' content='index, follow' />
+
+
+    <style>
+        /*For angular css*/
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+
+        /*End for angular css*/
+
+        /*Override css angular meterial*/
+
+        md-input-container .md-errors-spacer {
+            min-height: 0;
+        }
+
+        /*end Override css angular meterial*/
+
+        button.sale-xa-kho {
+            background: red;
+            color: #fff;
+            border: 3px solid #fff;
+            border-radius: 50px;
+            padding: 0.8rem 2rem;
+            font: 18px "Margarine", sans-serif;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            transition: 0.2s ease-in-out;
+            letter-spacing: 2px;
+            padding: 5px 10px;
+        }
+
+        .button-jittery button {
+            animation: jittery 4s infinite;
+        }
+
+        .button-jittery button:hover {
+            animation: heartbeat 0.2s infinite;
+        }
+
+        @keyframes jittery {
+            5%,
+            50% {
+                transform: scale(1);
+            }
+            10% {
+                transform: scale(0.9);
+            }
+            15% {
+                transform: scale(1.15);
+            }
+            20% {
+                transform: scale(1.15) rotate(-5deg);
+            }
+            25% {
+                transform: scale(1.15) rotate(5deg);
+            }
+            30% {
+                transform: scale(1.15) rotate(-3deg);
+            }
+            35% {
+                transform: scale(1.15) rotate(2deg);
+            }
+            40% {
+                transform: scale(1.15) rotate(0);
+            }
+        }
+
+        img.sale-flashing {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+
+    <link href="/Content/font-iconmoon/style.css" rel="stylesheet" />
+    <link href="/Scripts/angularplugin/angular-lazy/lazy-image-style.css" rel="stylesheet" />
+    <link href="/Content/frontend/main1605.less" rel="stylesheet" />
+    <link href="/Content/frontend/searchauto.less" rel="stylesheet" />
+
+
+    <noscript><img height="1" width="1" alt="" style="display:none" src="//www.facebook.com/tr?id=1456112147962574&amp;ev=PixelInitialized" /></noscript>
+
+
+    <link href="/Scripts/angularplugin/angular-materialize/angular-material.css" rel="stylesheet" />
+    <link href="/Content/FrontEnd/shoppingcart.less" rel="stylesheet" />
+
+
+
+
+    <!-- Global site tag (gtag.js)-->
+    <script async=async src="https://www.googletagmanager.com/gtag/js?id=UA-18237123-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-18237123-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics 4-->
+    <script async=async src="https://www.googletagmanager.com/gtag/js?id=G-PN5E4NBK64"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PN5E4NBK64');
+    </script>
+
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '958170025208569');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        C:\Repos\Xecenlabs\porto\add-on\xencelabs.css
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=958170025208569&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+</head>
+
+<body ng-app="bookbuy" ng-controller="shared.ctrl" data-spy="scroll" data-target=".sidemenu-box">
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=726958635325529&ev=PageView&noscript=1" />
+    </noscript>
+
+    <div id="bb-header">
+        <input id="IsMobile" name="IsMobile" type="hidden" value="False" />
+
+        <div class="banner-1-6">
+            <a href="https://bookbuy.vn/sieu-sale-thang-10">
+                <img src="/Images/frontend/sieu-sale-thang-10.jpg" style="width: 100%; object-fit: cover;"/>
+            </a>
+
+        </div>
+
+        <!-- top-header -->
+        <div class="menu_scoll menu_scoll_display mn-topmost-new">
+            <div class="navbar-wrapper navbar-default" role="navigation">
+                <div class="container clearfix navbar navbar-default  bs-docs-nav">
+                    <div class="bb-mainbox">
+                        <div class="row">
+                            <div class="left-header clearfix">
+                                <ul class="left-mb">
+                                    <li>
+                                        <div class="nav-mobile">
+                                            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="logo-mb">
+                                            <a href="/mua-sach-online.html" class="ui-link">
+                                                <img src="/Images/frontend/base/mobile/logo-new.png" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="left" style="margin-left: -15px;">
+                                    <li class="hover-bg help-nav"><a href="/Help/Index"><i class="ic icon-ic_info"></i>Trợ giúp</a></li>
+                                    <li class="hover-bg news-nav">
+                                        <a href="/news/1.html" id="btn-news-trigger" data-original-title="" title="">
+                                            <i class="ic icon-ic_newspaper"></i>
+                                            Tin tức
+                                        </a>
+                                    </li>
+                                    <li class="hover-bg promotion-nav">
+                                        <a href="/chuong-trinh-khuyen-mai.html" id="btn-prmotion-trigger">
+                                            <i class="ic icon-ic_tag"></i>
+                                            Khuyến mãi
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right-header clearfix">
+                                <ul class="right navbar-right has-user-info">
+                                    <li class="mn-search-box">
+
+                                        <div class="search-new-box col-md-6" style="width:100%;">
+                                            <div class="input-group">
+                                                <input type="text" name="TermTop" id="TermTop" autocomplete="off" placeholder="Bạn cần tìm gì?" class="form-control ui-autocomplete-input" />
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="search button-search-top"><span class="search1 icon-ic_search_24px"></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="hover-bg deals-nav"><a href="#" class=""><i class="ic icon-ic_gift-box"></i>Ưu đãi & tiện ích</a></li>
+                                    <li class="hover-bg checkorder-nav"><a href="/kiem-tra-don-hang.html" class=""><i class="ic icon-ic_box"></i> Kiểm tra đơn hàng</a></li>
+
+                                </ul>
+                                <ul class="right-mb navbar-right">
+                                    <li id="hotline-right" class="hotline-right"><a class="hotline" href="tel:0933109009"><i class="fa fa-phone-square"></i><span> 0933 109 009</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse panel-mb" role="navigation">
+                        <ul id="menu" class="nav navbar-nav has-user-info-mobile">
+                            <li>
+
+                                <a ng-show="shoppingCartCount>0" href="/gio-hang.html" ng-cloak=ng-cloak><i class="fa fa-shopping-cart"></i> {{shoppingCartCount + " sản phẩm"}} </a>
+
+                                <a ng-show="shoppingCartCount==0"><i class="fa fa-shopping-cart"></i> Giỏ hàng (0)</a>
+
+
+                            </li>
+
+                            <li>
+                                <a href="/kiem-tra-don-hang.html"><i class="fa fa-search"></i> Kiểm tra đơn hàng</a>
+                            </li>
+                            <li>
+                                <a href="/sale-soc-xa-kho.html" style="font-weight:bold; font-size: 16px; color:red"><img src="/Images/frontend/flashing.gif" class="sale-flashing" /> Sale Sốc Xả Kho</a>
+                            </li>
+                            <li class="header-menu">
+                                <a href="#"><i class="fa fa-folder-open"></i><b> Danh mục sản phẩm</b></a>
+                            </li>
+                            <li>
+                                <div class="menu-cat-mobile">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" target="_self" data-parent=" #accordion"=#accordion " href="#collapseOne ">{{Frontend_SubMainMenu_BookMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/sach.html "><strong>Xem tất cả</strong></a>
+                                                        <div ng-bind-html="renderHtml(Frontend_SubMainMenu_BookMobile.Description) "></div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading ">
+                                                <h4 class="panel-title ">
+                                                    <a data-toggle="collapse " target="_self " data-parent="#accordion " href="#collapseTwo ">{{Frontend_SubMainMenu_VanPhongPhamMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/van-phong-pham.html "><strong>Xem tất cả</strong></a>
+                                                        <div ng-bind-html="renderHtml(Frontend_SubMainMenu_VanPhongPhamMobile.Description) "></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading ">
+                                                <h4 class="panel-title ">
+                                                    <a data-toggle="collapse " target="_self " data-parent="#accordion " href="#collapse6 ">{{Frontend_SubMainMenu_PhuKienSoMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse6 " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/cong-nghe.html "><strong>Xem tất cả</strong></a>
+                                                        <div ng-bind-html="renderHtml(Frontend_SubMainMenu_PhuKienSoMobile.Description) "></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading ">
+                                                <h4 class="panel-title ">
+                                                    <a data-toggle="collapse " target="_self " data-parent="#accordion " href="#collapse7 ">{{Frontend_SubMainMenu_SucKhoeLamDepMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse7 " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/suc-khoe-lam-dep.html "><strong>Xem tất cả</strong></a>
+                                                        <div ng-bind-html="renderHtml(Frontend_SubMainMenu_SucKhoeLamDepMobile.Description) "></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading ">
+                                                <h4 class="panel-title ">
+                                                    <a data-toggle="collapse " target="_self " data-parent="#accordion " href="#collapseThree ">{{Frontend_SubMainMenu_VatDungDoiSongMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/vat-dung-gia-dinh.html "><strong>Xem tất cả</strong></a>
+                                                        <div ng-bind-html="renderHtml(Frontend_SubMainMenu_VatDungDoiSongMobile.Description) "></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading ">
+                                                <h4 class="panel-title ">
+                                                    <a data-toggle="collapse " target="_self " data-parent="#accordion " href="#collapse4 ">{{Frontend_SubMainMenu_QuaTangDoChoiMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse4 " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/qua-tang.html "><strong>Xem tất cả</strong></a>
+                                                        <div ng-bind-html="renderHtml(Frontend_SubMainMenu_QuaTangDoChoiMobile.Description) "></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading ">
+                                                <h4 class="panel-title ">
+                                                    <a data-toggle="collapse " target="_self " data-parent="#accordion " href="#collapse9 ">{{Frontend_SubMainMenu_ThoiTrangMobile.DisplayText}}</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse9 " class="panel-collapse collapse ">
+                                                <div class="panel-body ">
+                                                    <div class="list-group ">
+                                                        <a class="list-group-item " href="/thoi-trang.html "><strong>Xem tất cả</strong></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="header-menu ">
+                                <a href="# "><i class="icon-question-mark "></i><b> Ưu đãi & Tiện ích</b></a>
+                            </li>
+
+                            <li><a class="pad-l-35 " target="_blank " href="/dat-hang-theo-yeu-cau.html "><i class="icon-trolley-help-order "></i> Đặt hàng theo yêu cầu </a></li>
+                            <li><a class="pad-l-35 " target="_blank " href="/Help/Index/#shippingtype "><i class="icon-free-shipping-truck "></i> Miễn phí giao hàng</a></li>
+                            <li><a class="pad-l-35 " target="_blank " href="/cau-hoi-thuong-gap.html#promotion "><i class="icon-open-present-box "></i> Ưu đãi đặc biệt</a></li>
+                            <li><a class="pad-l-35 " target="_blank " href="/cau-hoi-thuong-gap.html#bbxupolicy "><i class="icon-pig-bank "></i> Mua hàng giá 0đ </a></li>
+                            <li><a class="pad-l-35 " target="_blank " href="/cau-hoi-thuong-gap.html#returnpolicy "><i class="icon-package "></i> Đổi trả hàng </a></li>
+
+
+
+
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- center-header -->
+
+                <div class="logo ">
+            <div class="container ">
+                <div>
+                    <div class="logo-left ">
+                        <a class="bb-logo " href="/mua-sach-online.html ">
+                            <img src="/Images/frontend/base/logo-new.png " title="Nhà sách trực tuyến BookBuy " alt="Nhà sách trực tuyến BookBuy " />
+                        </a>
+                    </div>
+                    <div class="logo-right col-md-offset-3 ">
+                        <div class="search-shopping-box ">
+                            <div class="search-new-box col-md-6 ">
+                                <div class="input-group ">
+                                    <div class="input-group-btn ">
+                                        <button type="button " style="padding:13px; " class="btn btn-default btn-category dropdown-toggle " data-toggle="dropdown ">Tất cả <span class="ic_arrow_drop_down_24px "></span></button>
+                                        <ul class="dropdown-menu " role="menu ">
+                                            <li><a cat="0 ">Tất cả </a></li>
+                                            <li><a cat="1 ">Sách - Truyện tranh </a></li>
+                                            <li><a cat="5 ">CD - DVD </a></li>
+                                            <li><a cat="6 ">Quà tặng </a></li>
+                                            <li><a cat="7 ">Dụng cụ vẽ - VPP </a></li>
+                                            <li><a cat="457 ">Công nghệ </a></li>
+                                            <li><a cat="535 ">Vật dụng gia đình </a></li>
+                                            <li><a cat="2896 ">Làm Đẹp - Sức Khỏe </a></li>
+                                        </ul>
+                                    </div>
+                                    <span role="status " aria-live="polite " class="ui-helper-hidden-accessible "></span><input type="text " name="Term " id="Term " autocomplete="off " placeholder="Bạn cần tìm gì? " class="form-control ui-autocomplete-input " />
+                                    <div class="input-group-btn ">
+                                        <button type="button " class="search button-search "><span class="search1 icon-ic_search_24px "></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hot-line col-md-3 ">
+                                <i class="ic icon-ic_headphones "></i>
+                                <span class="text ">
+                                    <p>0933 109 009</p>
+                                    <p class="text1 ">Hot line</p>
+                                </span>
+                            </div>
+                            <div class="cart-box-top col-md-2 ">
+                                <div class="cart-count ng-hide " ng-show="shoppingCartCount>0">
+                                                    <i class="icon-ic_shopping-cart"></i>
+                                                    <a class="has-count" href="/gio-hang.html">{{shoppingCartCount +" sản phẩm"}}  </a>
+                                            </div>
+                                            <div class="cart-none" ng-show="shoppingCartCount==0">
+                                                <i class="icon-ic_shopping-cart"></i>
+                                                <a> Giỏ hàng (0)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom-header -->
+        <div class="search-shopping-box box" style="background-color: #fff">
+            <div class="container">
+                <div class="main-menu">
+                    <div class="menu-trigger">
+                        <a class="thumb">
+                            <i class="icon-ic_menu_24px"></i>
+                            <span>Danh mục sản phẩm &nbsp;</span>
+                            <i class="icon-ic_arrow_drop_down_24px" style="margin-left: 15px;"></i>
+                            <div class="clearfix"></div>
+                        </a>
+                        <div class="menu-box" style="display: none;">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/sach.html" ng-cloak=ng-cloak><i class="bb-icons-menu icon-ic_book"></i><span>Sách - Truyện Tranh</span></a>
+                                    <div class="book childmenu-box">
+                                        <div style="position: relative; z-index: 1;" ng-bind-html="renderHtml(Frontend_SubMainMenu_Book.Description)">
+
+                                        </div>
+                                        <div class="banner-menu ">
+                                            <a target="_blank" ng-href="{{Frontend_SubMainMenu_Book.Link}}">
+                                                <img class="slimmage" ng-show="Frontend_SubMainMenu_Book.ImageURL!=null" ng-src="{{bindImage(Frontend_SubMainMenu_Book.ImageURL)}}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a title="Văn Phòng Phẩm" href="/van-phong-pham.html" class="">
+                                        <i class="bb-icons-menu icon-ic_paint-palette"></i>
+                                        <span>Dụng Cụ Vẽ - VPP</span>
+                                    </a>
+                                    <div class="stationery childmenu-box">
+                                        <div style="position: relative; z-index: 1;" ng-bind-html="renderHtml(Frontend_SubMainMenu_VanPhongPham.Description)">
+
+                                        </div>
+                                        <div class="banner-menu ">
+                                            <a target="_blank" ng-href="{{Frontend_SubMainMenu_VanPhongPham.Link}}">
+                                                <img class="slimmage" ng-show="Frontend_SubMainMenu_VanPhongPham.ImageURL!=null" ng-src="{{bindImage(Frontend_SubMainMenu_VanPhongPham.ImageURL)}}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a title="Bảng Vẽ &amp; Phụ Kiện Số" href="/cong-nghe.html" class=""><i class="bb-icons-menu icon-ic_mouse"></i><span>Bảng Vẽ - Phụ Kiện Số</span></a>
+                                    <div class="tech childmenu-box">
+                                        <div style="position: relative; z-index: 1;" ng-bind-html="renderHtml(Frontend_SubMainMenu_PhuKienSo.Description)">
+
+                                        </div>
+                                        <div class="banner-menu ">
+                                            <a target="_blank" ng-href="{{Frontend_SubMainMenu_PhuKienSo.Link}}">
+                                                <img class="slimmage" ng-show="Frontend_SubMainMenu_PhuKienSo.ImageURL!=null" ng-src="{{bindImage(Frontend_SubMainMenu_PhuKienSo.ImageURL)}}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a title="Vật Dụng - Đời Sống" href="/vat-dung-gia-dinh.html" class=""><i class="bb-icons-menu icon-ic_shopping-bag"></i><span>Vật Dụng - Đời Sống</span></a>
+                                    <div class="homeapp childmenu-box">
+                                        <div style="position: relative; z-index: 1;" ng-bind-html="renderHtml(Frontend_SubMainMenu_VatDungDoiSong.Description)">
+
+                                        </div>
+                                        <div class="banner-menu ">
+                                            <a target="_blank" ng-href="{{Frontend_SubMainMenu_VatDungDoiSong.Link}}">
+                                                <img class="slimmage" ng-show="Frontend_SubMainMenu_VatDungDoiSong.ImageURL!=null" ng-src="{{bindImage(Frontend_SubMainMenu_VatDungDoiSong.ImageURL)}}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a itemprop="url" title="Làm Đẹp - Sức Khỏe" href="/suc-khoe-lam-dep.html"><i class="bb-icons-menu icon-ic_cosmetics"></i><span>Làm Đẹp - Sức Khỏe</span></a>
+                                    <div class="tech childmenu-box">
+                                        <div style="position: relative; z-index: 1;" ng-bind-html="renderHtml(Frontend_SubMainMenu_SucKhoeLamDep.Description)">
+
+                                        </div>
+                                        <div class="banner-menu ">
+                                            <a target="_blank" ng-href="{{Frontend_SubMainMenu_SucKhoeLamDep.Link}}">
+                                                <img class="slimmage" ng-show="Frontend_SubMainMenu_SucKhoeLamDep.ImageURL!=null" ng-src="{{bindImage(Frontend_SubMainMenu_SucKhoeLamDep.ImageURL)}}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a itemprop="url" title="Quà Tặng - Đồ Chơi" href="/qua-tang.html" class=""><i class="bb-icons-menu icon-ic_gift"></i><span>Quà Tặng - Đồ Chơi</span></a>
+                                    <div class="gift childmenu-box">
+                                        <div style="position: relative; z-index: 1;" ng-bind-html="renderHtml(Frontend_SubMainMenu_QuaTangDoChoi.Description)">
+
+                                        </div>
+                                        <div class="banner-menu ">
+                                            <a target="_blank" ng-href="{{Frontend_SubMainMenu_QuaTangDoChoi.Link}}">
+                                                <img class="slimmage" ng-show="Frontend_SubMainMenu_QuaTangDoChoi.ImageURL!=null" ng-src="{{bindImage(Frontend_SubMainMenu_QuaTangDoChoi.ImageURL)}}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-banner">
+
+                    <div class="">
+                        <ul class="banner-text">
+                            <li>
+                                <a onclick="BookBuy.Banner.IncreaseClickCount(230); window.open('http://bookbuy.vn/cau-hoi-thuong-gap.html#promotion'); return false;" href="javascript:void(0)" title="Giảm th&#234;m 2%">
+                                            <img class="slimmage" src="/Res/Images/Banner/b4c2e18c-84fe-41d9-962b-41a55f2b0edb.png" /> <p>Giảm th&#234;m 2%</p>
+                                        </a>
+                            </li>
+                            <li>
+                                <a onclick="BookBuy.Banner.IncreaseClickCount(1342); window.open('https://bookbuy.vn/chuong-trinh-khuyen-mai.html'); return false;" href="javascript:void(0)" title="Chương Tr&#236;nh Khuyến M&#227;i">
+                                            <img class="slimmage" src="/Res/Images/Banner/dcf4a118-cd39-42f2-bf16-cbe343e106f7.jpg" /> <p>Chương Tr&#236;nh Khuyến M&#227;i</p>
+                                        </a>
+                            </li>
+                            <li style="padding-top: 10px !important">
+                                <div class="item button-jittery" style="--bg-color: #f1c40f">
+                                    <a href="/sale-soc-xa-kho.html">
+                                        <button class="sale-xa-kho">Sale Sốc Xả Kho</button>
+                                    </a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+    <div id="bb-body">
+
+        <input id="hdPage" name="hdPage" type="hidden" value="ShoppingCart" />
+        <div class="shopping-cart" ng-app="bookbuy" ng-controller="shoppingcart.ctrl">
+            <div class="container">
+                <div class="cart-left">
+                    <form action="/gio-hang.html" data-ajax="true" data-ajax-begin="UpdateCartBegin" data-ajax-success="UpdateCartSuccess" id="ShoppingCartForm" method="post"><input id="contentType" name="contentType" type="hidden" value="json" />
+                        <div class="cart-box">
+                            <div class="cart-detail">
+                                <table id="rounded-corner" cellspacing="0">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="img">
+                                                <div class="cart-header">
+                                                    <div class="header">
+
+                                                        <h4>
+                                                            Giỏ hàng
+                                                        </h4>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th colspan="2" class="title" style="width: 50%;">
+
+
+                                            </th>
+                                            <th class="price">
+
+                                            </th>
+                                            <th class="qty">
+
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        <tr class="item-cart" data-id="1043071">
+
+                                            <td align="center" class="img">
+                                                <input id="ShoppingCartDetails_0__ID" name="ShoppingCartDetails[0].ID" type="hidden" value="1043071" />
+                                                <a target="_blank" href="/sach/thau-hieu-tinh-cach-chon-nghe-tu-tin--p126509.html">
+                                                    <img class="slimmage" src="//bookbuy.vn//Res/Images/Product/thau-hieu-tinh-cach-chon-nghe-tu-tin-_126509_1.jpg?width=70" />
+                                                </a>
+                                            </td>
+                                            <td colspan="2" class="title">
+                                                <span class="number-index">1. </span> <span class="title"> <a target="_blank" href="/sach/thau-hieu-tinh-cach-chon-nghe-tu-tin--p126509.html">Thấu Hiểu T&#237;nh C&#225;ch, Chọn Nghề Tự Tin </a></span>
+                                                <br />
+                                                <span class="au">
+                                                        Tác giả :
+
+                                                            <a target="_blank" href="/tac-gia/shoya-zichy-ann-bidou-auth166/p1" style="color: #0066c0;"> <span class="au-name">Shoya Zichy Ann Bidou</span>                                                </a>
+                                                </span>
+                                                <br />
+                                                <span class="type">
+                                                    Loại : <span class="type-name"> S&#225;ch</span>
+                                                </span>
+                                                <p ng-cloak class="error" ng-init="ShoppingCartDetails[0].QuantityInvalidStr =''" ng-show="ShoppingCartDetails[0].QuantityInvalidStr !=''&&ShoppingCartDetails[0].QuantityInvalidStr !=null">
+                                                    {{ShoppingCartDetails[0].QuantityInvalidStr}}
+                                                </p>
+
+
+                                                <br />
+                                                <a class="box-del-product">
+                                                            Xóa
+                                                        </a> &nbsp; <span class="devider"> | </span> &nbsp;
+                                                <input type='hidden' name='productid' value='126509' />
+                                                <a class="add-fav-btn">
+                                                    Thêm vào yêu thích
+                                                </a>
+
+
+                                                <div class="cl"></div>
+                                                <div class="cl"></div>
+                                                <div class="cl"></div>
+                                            </td>
+                                            <td class="price">
+                                                <span class="real-price">
+                                                    126,500đ
+                                                </span>
+                                                <br />
+                                            </td>
+                                            <td class="qty">
+
+                                                <div class="bb-input-quantity">
+                                                    <button class="bb-button-outline minus-btn" ng-disabled="ShoppingCartDetails[0].Quantity==1" ng-click="ShoppingCartDetails[0].Quantity = ShoppingCartDetails[0].Quantity - 1;updateQuantity()">
+                                                            <i class="icon-minus"></i>
+                                                        </button>
+                                                    <input id="ShoppingCartDetails[0]_Quantity" name="ShoppingCartDetails[0].Quantity" class="quantity-valid bb-button-outline bb-button-outline-mid" ng-model="ShoppingCartDetails[0].Quantity" ng-init="ShoppingCartDetails[0].Quantity=1" />
+                                                    <button class="bb-button-outline  plus-btn" ng-click="ShoppingCartDetails[0].Quantity = ShoppingCartDetails[0].Quantity + 1;updateQuantity()">
+                                                            <i class="icon-plus-1"></i>
+                                                        </button>
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="cart-right">
+                    <div class="checkout-box">
+                        <div class="top">
+                            <span class="item-number" ng-cloak>{{ CartItemTotal }} sản phẩm</span>
+                            <span class="total" ng-init="ShoppingTotal.Total=126500" ng-cloak>{{ShoppingTotal.Total.formatMoney(0, '.', ',')}} đ</span>
+                            <span class="ship-fee">
+                            ( Chưa có cước vận chuyển )
+                        </span>
+                        </div>
+                        <div class="bottom">
+                            <a ng-disabled="flagInvalid==true" href="/thanh-toan.html" class="btn btn-lg">
+                                Tiến hành đặt hàng
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="modal fade" id="promo-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="border-radius: inherit;">
+                        <div class="modal-header" style="border: none;">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer" style="border: none;">
+                            <button type="button" class="btn btn-success" data-dismiss="modal" id="confirmbtn">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cl"></div>
+
+
+    </div>
+
+    <div class="letter-bottom">
+        <div class="container">
+            <div class="row form-letter">
+                <div class="col-md-2 canh-cam-img">
+                    <img src="/Images/frontend/base/canh-cam-letter.png" />
+                </div>
+                <div class="col-md-3 canh-cam-letter">
+                    <p class="head-text-letter">Đăng ký nhận bản tin</p>
+                    <p class="sub-text-letter">Đừng bỏ lỡ những tin nhắn ưu đãi độc quyền dành riêng cho bạn</p>
+                </div>
+                <div class="col-md-7 canh-cam-form">
+                    <form action="/BookBuy/RegisterLetter" data-ajax="true" data-ajax-failure="EmailRegisterBottomFailure" data-ajax-success="EmailRegisterBottomSuccess" id="emailletter-bottom" method="post">
+                        <div class="entry-form">
+                            <div class="name-box">
+                                <input type="hidden" id="sexId" name="sexId" />
+                                <span class="name-empty" style="color: red"></span>
+                                <br />
+                                <input type="text" name="EmailLetterName" id="EmailLetterName" placeholder="Nhập tên của bạn" />
+                            </div>
+                            <div class="email-box">
+                                <span class="email-error" style="color: red"></span>
+                                <br />
+                                <input type="text" name="EmailLetter" id="submit-letter" placeholder="Nhập địa chỉ email của bạn" />
+                                <ul class="action-submit">
+                                    <li><a href="javacript:void(0)" class="submit-letter-canh-cam" data-gender="1">NAM</a></li>
+                                    <li><a href="javacript:void(0)" class="submit-letter-canh-cam" data-gender="0">NỮ</a></li>
+                                    <li><a href="javacript:void(0)" class="submit-letter-canh-cam" data-gender="2">LGBT</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bb-footer">
+        <div class="f-below">
+            <div class="container">
+                <div class="f-below-container">
+                    <div class="help-links mobile-footer col-md-3 col-sm-3 col-xs-12">
+                        <ul class="ul-main">
+                            <li>
+
+                                <p class="header">HỖ TRỢ KHÁCH HÀNG</p>
+                                <input class="menu-btn" type="checkbox" id="tabmenu1" />
+                                <label class="menu-icon" for="tabmenu1"><span class="navicon"></span></label>
+
+                                <ul class="menu">
+                                    <li><span></span><a href="tel:0933109009">Sản phẩm & Đơn hàng: 0933 109 009</a> </li>
+                                    <li><span></span><a href="tel:0989439986">Kỹ thuật & Bảo hành: 0989 439 986</a></li>
+                                    <li><span></span><a href="tel:02838207153">Điện thoại: (028) 3820 7153 (giờ hành chính) </a></li>
+                                    <li><span></span><a href="mailto:info@bookbuy.vn">Email: info@bookbuy.vn</a></li>
+                                    <li><span></span> Địa chỉ: 9 Lý Văn Phức, Tân Định, Q1, TP.HCM</li>
+                                    <li><span></span><a href="/lien-he.html">Sơ đồ đường đi</a></li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="help-links mobile-footer col-md-3 col-sm-3 col-xs-12">
+                        <ul class="ul-main">
+                            <li>
+
+                                <p class="header">TRỢ GIÚP</p>
+                                <input class="menu-btn" type="checkbox" id="tabmenu2" />
+                                <label class="menu-icon" for="tabmenu2"><span class="navicon"></span></label>
+
+                                <ul class="menu">
+
+                                    <li><span></span><a href="/Help/Index/#helporder">Hướng dẫn mua hàng</a></li>
+                                    <li><span></span><a href="/Help/Index/#paymenttype">Phương thức thanh toán</a></li>
+                                    <li><span></span><a href="/Help/Index/#shippingtype">Phương thức vận chuyển</a></li>
+                                    <li><span></span><a href="/cau-hoi-thuong-gap.html#returnpolicy">Chính sách đổi - trả</a></li>
+                                    <li><span></span><a href="/cau-hoi-thuong-gap.html#refundpolicy">Chính sách bồi hoàn</a></li>
+                                    <li><span></span><a href="/cau-hoi-thuong-gap.html">Câu hỏi thường gặp (FAQs)</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="help-links mobile-footer col-md-3 col-sm-3 col-xs-12">
+                        <ul class="ul-main">
+
+                            <li>
+                                <p class="header"> TÀI KHOẢN CỦA BẠN</p>
+                                <input class="menu-btn" type="checkbox" id="tabmenu3" />
+                                <label class="menu-icon" for="tabmenu3"><span class="navicon"></span></label>
+
+
+                                <ul class="menu">
+                                    <li><span></span><a href="/cap-nhat-tai-khoan.html">Cập nhật tài khoản</a></li>
+                                    <li><span></span><a href="/gio-hang.html">Giỏ hàng</a></li>
+                                    <li><span></span><a href="/lich-su-giao-dich/1.html">Lịch sử giao dịch</a></li>
+                                    <li><span></span><a href="/san-pham-yeu-thich/1.html">Sản phẩm yêu thích</a></li>
+                                    <li><span></span><a href="/kiem-tra-don-hang.html">Kiểm tra đơn hàng</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="help-links mobile-footer col-md-3 col-sm-3 col-xs-12">
+                        <ul class="ul-main">
+                            <li class="item-last">
+                                <p class="header"> BOOKBUY</p>
+                                <input class="menu-btn" type="checkbox" id="tabmenu4" />
+                                <label class="menu-icon" for="tabmenu4"><span class="navicon"></span></label>
+
+                                <ul class="menu">
+                                    <li><span></span><a href="/gioi-thieu-bookbuy.html">Giới thiệu bookbuy.vn</a></li>
+                                    <li><span></span><a href="https://www.facebook.com/Bookbuybookstore/">BookBuy trên Facebook</a></li>
+                                    <li><span></span><a href="/lien-he.html">Liên hệ BookBuy</a></li>
+                                    <li><span></span><a href="/dat-hang-theo-yeu-cau.html">Đặt hàng theo yêu cầu</a></li>
+                                    <li><span></span><a href="/cau-hoi-thuong-gap.html#bbxupolicy">Tích lũy BBxu</a></li>
+                                    <li><span></span><a href="http://kaspersky.proguide.vn/">Proguide.vn - Kaspersky</a></li>
+                                    <li><span></span><a href="http://ibookstop.vn/">iBookStop.vn</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="h-links col-md-12 mobile-footer col-sm-12 col-xs-12">
+                        <ul class="ul-main">
+                            <li>
+                                <p class="header"> DANH MỤC PHỔ BIẾN</p>
+                                <input class="menu-btn" type="checkbox" id="tabmenu5" />
+                                <label class="menu-icon" for="tabmenu5"><span class="navicon"></span></label>
+                                <ul class="menu">
+                                    <li><span></span><a href="/pc?ct=420"><i class="fa fa-caret-right"></i> Truyện thiếu nhi</a></li>
+                                    <li><span></span><a href="/pc?ct=58&tt=van-hoc" style="padding: 3px 10px 3px 0px;"><i class="fa fa-caret-right"></i> Sách văn học</a></li>
+                                    <li><span></span><a href="/pc?ct=671"><i class="fa fa-caret-right"></i> Học sinh chân kinh</a></li>
+                                    <li><span></span><a href="/pc?ct=756"><i class="fa fa-caret-right"></i> Hoàng Sa - Trường Sa</a></li>
+                                    <li><span></span><a href="/pc?ct=183"><i class="fa fa-caret-right"></i> Thần đồng đất việt </a></li>
+                                    <li><span></span><a href="/qua-tang/handmade/ct388/p1"><i class="fa fa-caret-right"></i> Quà Handmade</a></li>
+                                    <li><span></span><a href="/van-phong-pham/dung-cu-sang-tao/ct891/p1"><i class="fa fa-caret-right"></i> Vật dụng sáng tạo</a></li>
+                                    <li><span></span><a href="/sach/ky-nang-quan-ly/ct579/p1"><i class="fa fa-caret-right"></i> Sách quản lý</a></li>
+                                    <li><span></span><a href="/sach/english-/ct871/p1"><i class="fa fa-caret-right"></i> Sách học Tiếng Anh</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/du-lich-phuot/ct664/p1"><i class="fa fa-caret-right"><span class="sp"> Du lịch, phượt</span></i></a></li>
+                                    <li><span></span><a href="/nha-san-xuat/LEGO/ct6id180/p1"><i class="fa fa-caret-right"></i> Game Lego</a></li>
+                                    <li><span></span><a href="/van-phong-pham/so-tay/ct117/p1"><i class="fa fa-caret-right"></i> Sổ tay</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/tui-the-thao/ct896/p1"><i class="fa fa-caret-right"></i> Túi thể thao</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/do-dung-ca-nhan/ct802/p1"><i class="fa fa-caret-right"></i> Bóp, ví</a></li>
+                                    <li><span></span><a href="/cong-nghe/wacom/ct497/p1"><i class="fa fa-caret-right"></i> Bảng vẽ Wacom</a></li>
+                                    <li><span></span><a href="/sach/14095/quang-ganh-lo-di-va-vui-song-ban-moi-2012-%28bia-mem%29.html"><i class="fa fa-caret-right"></i> Quẳng gánh lo đi và vui sống</a></li>
+                                    <li><span></span><a href="/qua-tang/thu-bong-do-choi-vai/ct727/p1"><i class="fa fa-caret-right"></i> Gấu bông</a></li>
+                                    <li><span></span><a href="/qua-tang/dong-ho-tranh/ct846/p1"><i class="fa fa-caret-right"></i> Đồng hồ tranh</a></li>
+                                    <li><span></span><a href="/qua-tang/qua-tang-cho-be/ct386/p1"><i class="fa fa-caret-right"></i> Đồ chơi an toàn</a></li>
+                                    <li><span></span><a href="/qua-tang/khan-choang/ct748/p1"><i class="fa fa-caret-right"></i> Khăn quàng cổ</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/ghe-luoi/ct839/p1"><i class="fa fa-caret-right"><span class="sp"> Ghế lười</span></i></a></li>
+                                    <li><span></span><a href="/tac-gia/nguyen-nhat-anh-auth532/p1"><i class="fa fa-caret-right"></i> Truyện Nguyễn Nhật Ánh</a></li>
+                                    <li><span></span><a href="/sach/kinh-di-gia-tuong-trinh-tham/ct567/p1"><i class="fa fa-caret-right"></i> Truyện trinh thám</a></li>
+                                    <li><span></span><a href="http://cmavn.org/truyen-tranh/khoa-hoc-ve-truyen-tranh-chuyen-nghiep"><i class="fa fa-caret-right"></i>Hoc ve</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/du-lich-phuot/ct664/p1"><i class="fa fa-caret-right"></i> Do phuot</a></li>
+                                    <li><span></span><a href="http://cmavn.org/hoat-hinh/khoa-hoc-lam-phim-hoat-hinh-3d-chuyen-nghiep"><i class="fa fa-caret-right"></i> Phim hoat hinh 3D</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/qua-luu-niem/ct387/p1"><i class="fa fa-caret-right"></i> Qua luu niem</a></li>
+                                    <li><span></span><a href="http://cmavn.org/hoat-hinh/khoa-hoc-lam-phim-hoat-hinh-2d-animation-artist"><i class="fa fa-caret-right"></i> Phim hoat hinh 2D</a></li>
+                                    <li><span></span><a href="http://cmavn.org/game/khoa-hoc-chuyen-vien-thiet-ke-game-dinh-cao-game-artist"><i class="fa fa-caret-right"></i> Thiet ke game</a></li>
+                                    <li><span></span><a href="/sach/song-dep/ct50/p1"><i class="fa fa-caret-right"></i> Qua tang cuoc song</a></li>
+                                    <li><span></span><a href="/sach/english-/ct871/p1"><i class="fa fa-caret-right"></i> Tai lieu tieng anh</a></li>
+                                    <li><span></span><a href="/bo-suu-tap/hat-giong-tam-hon/22970/p1"><i class="fa fa-caret-right"></i> Qua tang cuoc song</a></li>
+                                    <li><span></span><a href="/qua-tang/qua-tang-cho-nu/ct385/p1"><i class="fa fa-caret-right"></i> Qua 8/3</a></li>
+                                    <li><span></span><a href="/qua-tang.html"><i class="fa fa-caret-right"></i> Qua sinh nhat</a></li>
+                                    <li><span></span><a href="/sach.html"><i class="fa fa-caret-right"></i> Sinh nhat</a></li>
+                                    <li><span></span><a href="/sach/truyen-ngon-tinh/ct861/p1"><i class="fa fa-caret-right"></i> Truyen ngon tinh</a></li>
+                                    <li><span></span><a href="/sach/dam-my/ct860/p1"><i class="fa fa-caret-right"></i> Truyen dam my</a></li>
+                                    <li><span></span><a href="/tac-gia/marc-levy-auth3721/p1"><i class="fa fa-caret-right"></i> Marc Levy</a></li>
+                                    <li><span></span><a href="/sach/tieu-thuyet/ct278/p1"><i class="fa fa-caret-right"></i> Tieu thuyet tình cam</a></li>
+                                    <li><span></span><a href="/sach/kinh-te/ct62/p1"><i class="fa fa-caret-right"></i> Kinh te</a></li>
+                                    <li><span></span><a href="/sach/ky-nang-song/ct585/p1"><i class="fa fa-caret-right"></i> Ky nang song</a></li>
+                                    <li><span></span><a href="/sach/tu-vi-chiem-tinh/ct889/p1"><i class="fa fa-caret-right"></i> Tu vi</a></li>
+                                    <li><span></span><a href="/sach/tieng-nhat/ct607/p1"><i class="fa fa-caret-right"></i> Hoc tieng nhat</a></li>
+                                    <li><span></span><a href="/vat-dung-gia-dinh/balo/ct739/p1"><i class="fa fa-caret-right"></i> Balo</a></li>
+                                    <li><span></span><a href="/truyen-tranh.html"><i class="fa fa-caret-right"></i> Truyen tranh</a></li>
+                                    <li><span></span><a href="/van-phong-pham/40645/but-chi-mau-nuoc-raffine-marco-36-mau-hop-thiec-7120-36tn.html "> <i class="fa fa-caret-right"></i> Chi Mau Marco</a></li>
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="payment-box col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="payment-types">
+                            <ul>
+                                <li class="li-first">
+                                    Chấp nhận thanh toán :
+                                </li>
+                                <li>
+                                    <a class="visa-master"></a>
+                                </li>
+                                <li>
+                                    <a class="onepay"></a>
+                                </li>
+                                <li>
+                                    <a class="visa-jcb"></a>
+                                </li>
+                                <li>
+                                    <a class="cash-pay"></a>
+                                </li>
+                                <li>
+                                    <a class="moca-pay"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="social-networks">
+                            <ul>
+                                <li class="li-first">
+                                    Làm bạn với BookBuy :
+                                </li>
+                                <li class="fb">
+                                    <a target="_blank" href="https://www.facebook.com/Bookbuybookstore/"></a>
+                                </li>
+                                <li class="zl">
+                                    <a target="_blank" href="tel:0933109009"></a>
+                                </li>
+                                <li class="ins">
+                                    <a target="_blank" href="//www.instagram.com/bookbuy.vn"></a>
+                                </li>
+                                <li class="pin">
+                                    <a target="_blank" href="http://pinterest.com/bookbuyvn"></a>
+                                </li>
+                                <li class="tt">
+                                    <a target="_blank" href="https://www.tiktok.com/@bookbuy.vn"></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+
+
+                    </div>
+
+                    <div class="copyright col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="certificate">
+                            <a target="_blank" href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=815"><img class="slimmage" style="height:50px;" src="/Images/frontend/base/registerBB.png?w=100" /></a>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br />
+                </div>
+            </div>
+
+        </div>
+        <div class="newsletter-toggle hidden-xs active">
+            <form action="/BookBuy/RegisterLetter" data-ajax="true" data-ajax-failure="EmailRegisterToggleFailure" data-ajax-success="EmailRegisterToggleSuccess" id="emailletter-toggle" method="post">
+                <h4 class="header-newsletter-toggle">
+                    <span>Đăng ký nhận bản tin từ Bookbuy</span>
+                    <a class="toggle">
+                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-envelope-o"></i>
+                    </a>
+                </h4>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="EmailLetter" required="" id="emaillettertoggle" placeholder="Email của bạn" />
+                    <span class="toggle-error"></span>
+                    <span class="toggle-success"></span>
+                    <input type="hidden" id="sexIdToggle" name="sexId" />
+                    <ul class="action-submit">
+                        <li><a href="javacript:void(0)" class="submit-letter-toggle" data-gender="1">NAM</a></li>
+                        <li><a href="javacript:void(0)" class="submit-letter-toggle" data-gender="0">NỮ</a></li>
+                        <li><a href="javacript:void(0)" class="submit-letter-toggle" data-gender="2">LGBT</a></li>
+                    </ul>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--add to cart success dialog-->
+    <div class="modal fade" id="add-cart-success-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="border-radius: 0 5px 0 50%; background: #000000; width: 30px; height: 30px; position: relative; z-index: 1111111; color: #fff;">&times;</button>
+                <div class="modal-body">
+                    <div class="cart-popup__row">
+                        <div class="cart-popup__cell">
+                            <div class="cart-popup-item">
+                                <h5 class="cart-popup-item__header " ng-cloak=ng-cloak>
+                                    <i class="fa fa-check"></i> {{quantityAdd}} sản phẩm vừa được thêm vào giỏ hàng
+                                </h5>
+                                <div class="cart-popup-item__product-list">
+                                    <div class="cart-popup-product cart-popup-product_main cart-popup-product_quantity">
+                                        <div class="cart-popup-product__link-img">
+                                            <a class="cart-popup-product__link" ng-href="{{productCartItem.Link}}">
+                                                <img class="cart-popup-product__img" ng-src="{{productCartItem.URL}}" alt="{{productCartItem.Title}}" />
+                                            </a>
+                                        </div>
+                                        <div class="cart-popup-product__info" ng-cloak=ng-cloak>
+                                            <h2 class="cart-popup-product__title" ng-cloak=ng-cloak>{{productCartItem.Title}}</h2>
+                                            <div class="au-view" ng-show="productCartItem.Authors.length>0">
+                                                <span>Tác giả: </span> <a href="{{item.Author.Link}}" ng-repeat="item in productCartItem.Authors">{{item.Author.Name}}</a>
+                                            </div>
+                                            <div class="publisher-view" ng-show="productCartItem.Publisher!=null">
+                                                <span>Nhà phát hành: </span> <a href="{{productCartItem.Publisher.Link}}">{{productCartItem.Publisher.Name}}</a>
+                                            </div>
+                                            <div class="supplier-view" ng-show="productCartItem.Supplier!=null">
+                                                <span>Nhà cung cấp: </span> <a href="{{productCartItem.Supplier.Link}}">{{productCartItem.Supplier.Name}}</a>
+                                            </div>
+                                            <div class="maker-view" ng-show="productCartItem.Maker!=null">
+                                                <span>Nhà sản xuất: </span> <a href="{{productCartItem.Maker.Link}}">{{productCartItem.Maker.Name}}</a>
+                                            </div>
+                                            <div class="cart-popup-product__paid-price">{{productCartItem.RealPriceStr}}₫</div>
+                                            <div class="cart-popup-product__discount-block" ng-show="productCartItem.DiscountPercent>0">
+                                                <div class="cart-popup-product__original-unit-price">{{productCartItem.PriceStr}}₫</div>
+                                                <div class="cart-popup-product__discount">Giảm giá {{productCartItem.DiscountPercent}}%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-popup__cell cart-popup__cell_summary">
+                            <div class="cart-summary">
+                                <h5 class="summary-header">
+                                    <span class="txt-large txt-black mrs">Giỏ hàng</span>
+                                    <span ng-cloak=ng-cloak class="txt-light-blue txt-normal txt-medium">
+                                        ({{shoppingCartCount}} sản phẩm)
+                                    </span>
+                                    <a href="/gio-hang.html" style="color:#03A9F4;">
+                                        <span class="glyphicon glyphicon-edit"></span> cập nhật
+                                    </a>
+                                </h5>
+
+                                <div class="summary-main table mtm">
+                                    <div class="summary-subtotal row">
+                                        <span class="col">Tạm tính:</span>
+                                        <span class="col txt-right" ng-cloak=ng-cloak>{{totalAllCart.formatMoney(0, '.', ',')}}₫</span>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="summary-total">
+                                    <div class="row">
+                                        <span class="col txt-size-small">
+                                            <span class="txt-bold txt-black">Thành tiền</span>
+                                        </span>
+                                        <h3 class="col txt-right txt-large txt-bold txt-black" ng-cloak=ng-cloak>{{totalAllCart.formatMoney(0, '.', ',')}}₫</h3>
+                                    </div>
+                                </div>
+
+                                <div class="summary-control table mt15 mbs">
+                                    <div class="row">
+                                        <span class="continue-shopping-wrap col">
+                                            <a class="btn sel-continue-shopping continue-shopping" data-dismiss="modal" href="#">
+                                                <i class="fa fa-long-arrow-left"></i> <span>Tiếp tục mua hàng</span>
+                                        </a>
+                                        </span>
+
+                                        <span class="col">
+                                            <a href="/thanh-toan.html" class="btn btn-bb btn-do-checkout">Thanh toán<i class="fa fa-long-arrow-right"></i></a>
+                                        </span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cl"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--register letter success dialog-->
+    <div class="modal fade" id="register-letter-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Đăng kí thành công</h4>
+                </div>
+                <div class="modal-body">
+                    Ngay bây giờ check email để lấy mã ưu đãi dành riêng cho bạn nhé.
+                    <br /> Vui lòng kiểm tra hộp Spam nếu không thấy email trong Inbox và đánh dấu "Đây không phải thư rác / Report not spam"
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--post success dialog-->
+    <div class="modal fade" id="post-success-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--express buy dialog-->
+    <div id="express-buy-dialog">
+        <div class="loading"></div>
+        <div class="content" id="{{productItem.ID}}" ng-show="productItem">
+            <div class="t-view">
+                {{productItem.Title}}
+            </div>
+            <div class="au-view" ng-show="productItem.Authors.length>0">
+                <a href="{{item.Author.Link}}" ng-repeat="item in productItem.Authors">{{item.Author.Name}}</a>
+            </div>
+            <div class="des-view">
+                {{productItem.DescriptionOnlyText}}...
+                <a href="{{productItem.Link}}">Xem thêm</a>
+            </div>
+            <div class="p-view">
+                <span class="real-price">{{productItem.RealPriceStr}}₫</span> &nbsp;&nbsp;
+                <span class="price" ng-show="productItem.DiscountPercent>0">{{productItem.PriceStr}}₫</span>
+                <div class="discount-percent" ng-show="productItem.DiscountPercent>0">
+                    <label> Giảm giá </label>
+                    <span>{{productItem.DiscountPercent}} %</span>
+                </div>
+
+                <div class="color-choose" ng-show="productItem.Colors.length>0">
+                    <span> Màu sắc: </span>
+                    <div class="content" data="{{productItem.Colors.length>0?true:false}}">
+                        <ul ng-cloak=ng-cloak>
+                            <li ng-repeat="item in productItem.Colors" class="bg-size" ng-if="item.Color.ImageURL != null && item.Color.ImageURL != ''">
+                                <img class="color-item" data="{{item.ColorID}}" ng-src="/Res/Images/Color/{{item.Color.ImageURL}}?width=64&height=93&mode=max" />
+                            </li>
+                            <li ng-repeat="item in productItem.Colors" class="bg-size" ng-if="item.Color.Code != null && item.Color.Code != ''">
+                                <div class="color-item color-pattern" data="{{item.ColorID}}" style="background:#{{item.Color.Code}}">
+                                </div>
+                            </li>
+
+                            <li ng-repeat="item in productItem.Colors" class="bg-size" ng-if="(item.Color.Code == null || item.Color.Code == '') &&( item.Color.ImageURL != null || item.Color.ImageURL != '')">
+                                <div class="color-item color-name" data="{{item.ColorID}}">
+                                    {{item.Color.Name}}
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="fussed-choose" id="{{'fussed-' + productItem.ID}}" ng-show="productItem.HasFussed" hasfussed="{{productItem.HasFussed}}">
+                    <span> Chọn kiểu dáng: </span>
+                    <div class="content">
+
+                        <div class="fussed-list">
+                            <input ng-repeat="item in productItem.Images" type="button" ng-show="item.FussedID!=null" ng-disabled="item.TotalQuantity==0" rel="{{item.FussedID}}" class="item-fussed" value="{{item.Fusseds.Name}}" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="size-choose" ng-show="productItem.Sizes.length>0">
+                    <span>Size: </span>
+                    <div class="content" data="{{productItem.Sizes.length>0?true:false}}">
+                        <ul ng-repeat="item in productItem.Sizes">
+                            <li class="bg-size" data="{{item.ID}}">
+                                <span>
+                                        {{item.Name}}
+                                    </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="gift-view" ng-show="productItem.HasGift">
+                <div class="l">
+                    <i class="fa fa-2x fa-gift"></i>
+                </div>
+                <div class="r">
+                    {{productItem.HasGift}}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="vloader express-loading" style="display:none;"></div>
+            <form action="/BookBuy/ShoppingCart" data-ajax-begin='return AddToCartBegin(null)' data-ajax-success='AddToCartSuccess' data-ajax='true' method='post'>
+                <input type='hidden' name='productid' class="productid" value='' />
+                <input type='hidden' name='Sizes' class="Sizes" value='' />
+                <input type='hidden' name='colorid' class="colorid" value='' />
+                <input type='hidden' name='fussedid' class="fussedid" />
+                <input type='hidden' name='quantity' value='1' />
+                <input type='hidden' name='price' value='{{productItem.RealPrice}}' />
+                <input type='hidden' name='actiontype' id="actiontype" value='' />
+                <input type='submit' ng-hide="productItem.IsOutOff" class='btn-buy btn btn-bb add-to-cart' value='THÊM VÀO GIỎ HÀNG' />
+                <input type='submit' class='btn-buy btn btn-bb buy-now' value='MUA NGAY' ng-show="(productItem.QuantityRemain>0 || (!productItem.IsNotPublished && !productItem.IsOutOff))" />
+
+
+                <div class="pre-box" ng-show="(productItem.IsNotPublished && (productItem.QuantityRemain==null || productItem.QuantityRemain==0) && !productItem.IsOutOff)">
+                    <small>{{productItem.Type==1 || productItem==759 ? 'Sách này sắp phát hành' : 'Hàng này sắp ra mắt'}} </small>
+                    <br />
+                    <input type='submit' class='btn-pre btn btn-primary buy-now' value='Đặt hàng trước' />
+
+                </div>
+
+                <div class="request-box" ng-show="productItem.IsOutOff ">
+                    <small>Hàng này không còn </small>
+                    <br />
+                    <a class="btn btn-request btn-danger">
+                            <i class="fa fa-bullhorn"></i> Báo tôi khi có hàng
+                        </a>
+
+                </div>
+            </form>
+            <form action="/BookBuy/AddToFavorite" data-ajax-begin='AddToFavBegin' data-ajax-success='AddToFavSuccess' data-ajax='true' method='post'>
+                <input type='hidden' name='productid' class="productid" value='' />
+                <a class="btn btn-default btn-fav">
+                        <i class="fa fa-heart"></i>
+                        Thêm vào yêu thích
+                    </a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <a href="#" id="toTop" class="bg-btn-top">
+        <i class="fa fa-level-up"></i>
+    </a>
+
+
+    <!--inform user when product available-->
+    <div class="modal fade" id="request-info-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form action="/BookBuy/RequestInfo" data-ajax="true" data-ajax-begin="RequestInfoBegin" data-ajax-success="RequestInfoSuccess" id="requestinfo-form" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Yêu cầu thông báo khi có hàng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="request-info-box">
+
+                            <input id="RequestInfo_ProductID" name="RequestInfo.ProductID" type="hidden" value="" />
+                            <input id="RequestInfo_Title" name="RequestInfo.Title" type="hidden" value="" />
+                            <input class="form-control" id="RequestInfo_FullName" name="RequestInfo.FullName" placeholder="Họ tên" type="text" value="" />
+                            <input class="form-control" id="RequestInfo_Telephone" name="RequestInfo.Telephone" placeholder="Điện thoại" type="text" value="" />
+                            <input class="form-control" id="RequestInfo_Email" name="RequestInfo.Email" placeholder="Email" type="text" value="" />
+                            <div>
+                                <div class="g-recaptcha" id="request-captcha" style="width:100%"></div>
+                            </div>
+
+                            <p id="validateErr" class="top-error"></p>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input class="btn btn-primary" type="submit" value="Gửu yêu cầu" />
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="floating-container">
+        <div class="floating-button">
+            <img src="/Images/frontend/base/chat.png" />
+        </div>
+        <div class="element-container">
+
+            <a href="tel:0933109009">
+                <span class="float-element tooltip-left">
+                    <img src="/Images/frontend/base/phone.png" />
+                </span>
+            </a>
+
+            <a target="_blank" href="https://www.messenger.com/t/Bookbuybookstore">
+                <span class="float-element">
+                    <img src="/Images/frontend/base/facebook.png" />
+                </span>
+            </a>
+
+            <a target="_blank" id="zalo_link" href="https://zalo.me/0933109009">
+
+                <span class="float-element">
+                    <img class="zalo-logo" src="/Images/frontend/base/zalo-logo.png" />
+                </span>
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        var pathImageWebContent = '/Res/Images/Webcontent/';
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async=async async=async defer=defer defer=defer></script>
+    <script src="/Scripts/jquery-2.1.1.js" defer></script>
+    <script src="/Scripts/jquery-ui-1.10.4.js" defer></script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.js" defer></script>
+    <script src="/Scripts/jquery.validate.js" defer></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js" defer></script>
+    <script src="/Scripts/angular-1.5.3.js" defer></script>
+    <script src="/Scripts/angular-route.js" defer></script>
+    <script src="/Scripts/angular-animate.js" defer></script>
+    <script src="/Scripts/angular-aria.js" defer></script>
+    <script src="/Scripts/angular-messages.js" defer></script>
+    <script src="/Scripts/angularplugin/countdownTimer.js" defer></script>
+    <script src="/Scripts/angularplugin/angular-materialize/angular-material.js" defer></script>
+    <script src="/Scripts/bootstrap.js" defer></script>
+    <script src="/Scripts/jquery.cookie.js" defer></script>
+    <script src="/Scripts/frontend/jquery.tinycarousel.js" defer></script>
+    <script src="/Scripts/menu-aim/jquery.menu-aim.js" defer></script>
+    <script src="/Scripts/jquery.lazy.js" defer></script>
+    <script src="/Scripts/angularplugin/angular-lazy/lazy-image.js" defer></script>
+    <script src="/Scripts/frontend/base.js" defer></script>
+    <script src="/Scripts/frontend/frontendtop-new1605a.js" defer></script>
+
+
+
+    <script src="/Scripts/angularplugin/angular-materialize/angular-material.js" defer></script>
+    <script src="/Scripts/frontend/shoppingcart.js" defer></script>
+
+
+    <script type="text/javascript">
+        var shoppingcartid = 476671;
+    </script>
+
+
+
+    <script type="text/javascript" async="async" defer="defer" src="//apis.google.com/js/platform.js?publisherid=101516724021536275124">
+    </script>
+
+    <script defer="defer">
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-18237123-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Google Code for Conversion 2015 Conversion Page -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 970663301;
+        var google_conversion_language = "en";
+        var google_conversion_format = "2";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "hSuHCNKSmlkQhcvszgM";
+        var google_remarketing_only = false;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js ">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="// www.googleadservices.com/pagead/conversion/970663301/?label=hSuHCNKSmlkQhcvszgM&amp;guid=ON&amp;script=0 " />
+        </div>
+    </noscript>
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18237123-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('' == document.location.protocol ? '//' : 'https://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <div id="fb-root"></div>
+
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.async = true;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6&appId=560626247431723";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '726958635325529');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=726958635325529&ev=PageView&noscript=1" />
+    </noscript>
+
+
+    <script src="//cdn.onesignal.com/sdks/OneSignalSDK.js" defer='defer'></script>
+    <script defer="defer">
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "427c3add-e88a-4a7d-9de9-f11e7c18ab0c",
+            autoRegister: true,
+            /* Set to true to automatically prompt visitors */
+            promptOptions: {
+                /* These prompt options values configure both the HTTP prompt and the HTTP popup. */
+                /* actionMessage limited to 90 characters */
+                actionMessage: "Bạn muốn nhận thông báo từ Bookbuy.",
+                /* acceptButtonText limited to 15 characters */
+                acceptButtonText: "Chấp nhận",
+                /* cancelButtonText limited to 15 characters */
+                cancelButtonText: "Từ chối"
+            },
+            subdomainName: '//bookbuy.onesignal.com',
+            notifyButton: {
+                enable: false /* Set to false to hide */
+            }
+        }]);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var id = [];
+            var page = 'other';
+            var price = 0;
+            var name = '';
+            id = jQuery("#productid").attr("value");
+            name = jQuery("#ProductDetail_Title").attr("value");
+            price = jQuery(".price").first().text().replace(/[^0-9]/g, '');
+
+            gtag('event', 'view_item', {
+                "items": [{
+                    "id": id,
+                    "name": name,
+                    "price": price,
+
+                }]
+            });
+            jQuery('.add-to-cart').click(function() {
+                gtag('event', 'add_to_cart', {
+                    "items": [{
+                        "id": id,
+                        "name": name,
+                        "price": price
+                    }]
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

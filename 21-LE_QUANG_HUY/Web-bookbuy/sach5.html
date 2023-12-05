@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <title>Chú Khủng Long Đi Lạc</title>
+</head>
+
+<body>
+    <div class="app">
+        <!-- navBar -->
+        <nav id="navbar" class="nav">
+            <i onclick="handleDarkMode()" id="toggleMobile" class="fas fa-moon fa-moon_mobile"></i>
+
+            <img onclick="window.location.href='index.html'" src="./assets/img/logo-new.png" alt="logo" class="logo" style="cursor: pointer" />
+            <div class="nav__menu">
+                <a id="navHome" href="./index.html">TRANG CHỦ</a>
+                <a id="navIntroduction" href="./profile.html">THÔNG TIN</a>
+                <a id="navShowtimes" href="./showtimes.html">TRUYỆN TRANH</a>
+                <a id="navNews" href="./news.html">SẮP XUẤT BẢN</a>
+                <a id="navPrice" href="./price.html">ƯU ĐÃI</a>
+                <a id="navPrice" href="./sitemap.html">SITEMAP</a>
+
+                <div class="nav__right">
+                    <div id="navRightUserInfor" style="display: flex; align-items: center; cursor: pointer"></div>
+                    <a href="login.html" id="loginNav">ĐĂNG NHẬP</a>
+                    <div class="gio-hang">
+                      <a href="cart.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a>
+                    </div>
+                </div>
+            </div>
+            <div id="navMobie" class="nav__mobie">
+                <div style="display: flex; flex-direction: column; align-items: center" onclick="window.location.replace('./profile.html')">
+                    <a id="navMobieUserName" style=" margin-top: 15px; font-size: 18px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Thành viên__</a>
+                </div>
+                <a href="./index.html">TRANG CHỦ</a>
+                <a href="./profile.html">GIỚI THIỆU</a>
+                <a href="./showtimes.html">TRUYỆN TRANH</a>
+                <a href="./news.html">SẮP XUẤT BẢN</a>
+                <a href="./price.html">ƯU ĐÃI</a>
+                <a id="navMobieAuth" href="./login.html">ĐĂNG NHẬP</a>
+            </div>
+            <div id="hamburger" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+<!-- homePage -->
+<div class="home">
+        <div id="slider" style="align-items: center; justify-content: center; text-align: center;">
+          <ul id="slideWrap ">
+            <li><img src="./assets/img/3b0cd6b3-3099-4c43-988f-595472a4488e.jpg" alt="" /></li>
+            <li><img src="./assets/img/33c79415-fe9b-4cbf-81b7-b091b5f2bbfa.jpg" alt="" /></li>
+            <li><img src="./assets/img/95ea3a7e-8d5c-4046-b1ad-676412ed9cd2.jpg" alt="" /></li>
+            <li><img src="./assets/img/9210ad11-08b5-4fae-a5fe-7556343ca9e9.jpg" alt="" /></li>
+          </ul>
+          <img src="./assets/svg/arrow.svg" alt="arrow" id="prev" />
+          <img src="./assets/svg/arrow.svg" alt="arrow" id="next" />
+        </div>
+
+<!-- product -->
+<section class="product">
+    <div class="container">
+        <div class="product-content row">
+            <div class="product-content-left">
+                <div class="product-content-left-img">
+                    <img src="./assets/img/sach5.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-content-right">
+                <div class="product-content-right-product-name">
+                    <h1>Gợi Mở Trí Tưởng Tượng: Chú Khủng Long Đi Lạc - Một Câu Chuyện Về Điều Kỳ Diệu Của Tình Bạn</h1>
+                    <p> <span>Jesse Peterson</span> (Tác giả)</p>
+                </div>
+                <div class="product-content-right-product-price">
+                    <p id="priceInput" style="color: #FE642E; font-size: 24px;">90.000<sup>đ</sup></p>
+                    
+                </div>
+                <p>Tiết kiệm: <span>39.000<sup>đ</sup> (30%)</span></p>
+                    <p>Giá thị trường: 129.000<sup>đ</sup></p>
+                    <p>Tình trạng: <span style="color: red;">Còn hàng</span></p>
+                <div class="quantity">
+                    <p style="font-weight: bold;">Số lượng: </p>
+                    <input type="numbers" min="1" value="1" id="quantityInput">
+                    <p style="color: red;">Vui lòng chọn số lượng</p>
+                </div>
+                <div class="product-content-right-product-button-gio">
+                  <button><p>THÊM VÀO GIỎ HÀNG</p></button>
+                </div>
+                <div class="product-content-right-product-button-mua">
+                    <button onclick="addToCart()"><i class="fas fa-shopping-cart"></i><p>MUA HÀNG</p></button>
+                </div>
+                <div class="product-content-right-product-icon">
+                    <p>Gọi đặt hàng: <span style="color: #FE642E;">(028) 3820 7153</span> hoặc <span style="color: #FE642E;">0933 109 009</span>
+                    </p>
+                </div>
+                <div class="product-content-right-product-sale">
+                  <p style="font-weight: bold;">Thông tin & Khuyến mãi</p>
+                  <p>Đổi trả hàng trong vòng 7 ngày</p>
+                  <p>Freeship nội thành Sài Gòn từ <span>150.000đ*</span>.</p>
+                  <p>Freeship toàn quốc từ <span>250.000đ</span></p>
+                </div>
+            </div>
+        </div>
+    <div class="contents">
+      <div style="font-size: 22px; font-weight: bold; margin: 20px 10px;">
+        <p>Giới thiệu sản phẩm</p>
+      </div>
+      <p>&nbsp</p>
+      <div style="color: #FE642E; font-weight: bold; font-size: 25px; text-align: center; margin-bottom: 20px;">
+        <p>Gợi Mở Trí Tưởng Tượng: Chú Khủng Long Đi Lạc - Một Câu Chuyện Về Điều Kỳ Diệu Của Tình Bạn</p>
+      </div>
+      <div >
+        <p>Mải đuổi theo Ngôi Sao Hư Ảo, Khủng Long đi lạc xa khỏi Làng Tinh Cầu.</p><br>
+        <p>Buồn bã, cơ đơn, Khủng Long cất tiếng khóc. Bạn bè ở Làng Tinh Cầu nghe tiếng khóc của Khủng Long, nhưng không gọi Khủng Long về được, vì tiếng khóc của nó nhấn chìm mọi âm thanh.</p><br>
+        <p>Cho đến khi, tất cả những người bạn cùng nghĩ ra một cách…</p><br>
+        <p>CÂU CHUYỆN ĐỂ EM BIẾT RẰNG: NHỮNG ĐIỀU THÂN THƯƠNG KHI BẠN BÈ BÊN NHAU NHƯ BÀI HÁT TA CÙNG HÁT, NHƯ MÓN ĂN TA CÙNG ĂN, NHƯ TRÒ CHƠI TA CÙNG VUI CHƠI... LÀ THỨ QUÝ GIÁ ĐỂ TÌNH BẠN CÒN ĐÓ MÃI.</p><br>
+        <p>Chú Khủng Long đi lạc - nằm trong bộ sách GỢI MỞ TRÍ TƯỞNG TƯỢNG, - làm giàu trí tưởng tượng và khả năng ngôn ngữ của trẻ em.</p><br>
+        <p style="font-weight: bold;">Bộ gồm 3 tựa:</p><br>
+        <p>- Thế giới diệu kỳ của Thỏ Mọt Sách</p><br>
+        <p>- Hạt giống lạ của Mion</p><br>
+        <p>- Chú Khủng Long đi lạc</p><br>
+      </div>
+    </div>
+    </div>
+</section>
+</div>
+
+<!-- footer -->
+<footer class="footer" id="footer">
+    <div class="footer__navList">
+      <span onclick="window.location.replace('./index.html')"
+        >TRANG CHỦ</span
+      >
+      <span onclick="window.location.replace('./showtimes.html')"
+        >TRUYỆN TRANH</span
+      >
+      <span onclick="window.location.replace('./news.html')"
+        >SẮP XUẤT BẢN</span
+      >
+      <span onclick="window.location.replace('./price.html')">ƯU ĐÃI</span>
+    </div>
+    <div class="footer__download">
+      <img src="./assets/img/downloadAppStore.png" alt="img" />
+      <img src="./assets/img/downloadGooglePlay.png" alt="img" />
+      <img
+        src="./assets/img/logo_da_thong_bao.png"
+        width="180px"
+        alt="img"
+      />
+    </div>
+    <p class="footer__text">
+      Mua sách online tại Bookbuy, bạn được tận hưởng chính sách hỗ trợ miễn phí đổi trả hàng, giao hàng nhanh – tận nơi – miễn phí*, thanh toán linh hoạt - an toàn, đặc biệt giảm thêm trên giá bán khi sử dụng BBxu giúp bạn mua sách online giá 0đ!<br />
+      Chỉ với 3 cú click chuột, chưa bao giờ trải nghiệm mua sách online lại dễ chịu và nhẹ nhàng như vậy. Còn chần chờ gì nữa, đặt mua ngay những tựa sách hay cùng hàng ngàn sản phẩm chất lượng khác tại Bookbuy.vn<br />
+    </p>
+    <div class="footer__logo">
+      <img src="./assets/img/logo-new.png" width="100px" alt="logo" />
+      <img
+        src="./assets/img/Facebook.png"
+        onclick="window.open()"
+        alt="logo"
+      />
+      <img src="./assets/img/Gmail.png" alt="logo" />
+    </div>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/autoSlide.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/profile.js"></script>
+</body>
+</html>

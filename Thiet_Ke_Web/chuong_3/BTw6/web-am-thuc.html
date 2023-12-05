@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nhà Hàng Ẩm Thực</title>
+</head>
+<body>
+    <header>
+        <h1>Nhà Hàng Đặc Biệt</h1>
+        <img src="picture\thiet-ke-logo-nha-hang-06.jpg" alt="Logo Nhà Hàng">
+        <nav>
+            <ul>
+                <li><a href="#menu">Thực Đơn</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Giới Thiệu</h2>
+        <img src="picture\R.jpg" alt="Nhà Hàng Nội Thất">
+        <p>Nhà hàng của chúng tôi có không gian nội thất tuyệt đẹp với phong cách độc đáo. Hãy đến và trải nghiệm những món ăn ngon và không gian thoải mái tại đây!</p>
+    </section>
+
+    <section id="menu">
+        <h2>Thực Đơn</h2>
+        <table>
+            <tr>
+                <th>Món Ăn</th>
+                <th>Giá</th>
+                <th>Hình Ảnh</th>
+            </tr>
+            <tr>
+                <td>Phở Bò</td>
+                <td>120.000đ</td>
+                <td><img src="picture\OIP.jpg" alt="Phở Bò"></td>
+            </tr>
+            <tr>
+                <td>Gà Nướng</td>
+                <td>100.000đ</td>
+                <td><img src="picture\1872_10530_roasted_rosemary_roasted_chicken.jpg" alt="Gà Nướng"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="special-menu">
+        <h2>Thực Đơn Đặc Biệt</h2>
+        <div class="special-item">
+            <img src="special-dish.jpg" alt="Món Đặc Biệt">
+            <p>Món đặc biệt hàng ngày: Sườn nướng với sốt hòa quyện và rau xanh tươi ngon. Chỉ có tại chúng tôi!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên Hệ</h2>
+        <address>
+            <p>Địa chỉ: 123 Đường ABC, Thành Phố XYZ</p>
+            <p>Số Điện Thoại: (123) 456-7890</p>
+            <p>Email: info@nhahangamthuc.com</p>
+        </address>
+        <form>
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="message">Lời Nhắn:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+</body>
+</html>

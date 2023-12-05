@@ -1,0 +1,150 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8F8F8;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: box-shadow .4s, color .3s;
+}
+  
+a:hover {
+    color: orangered;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    height: 50px;
+    align-items: center;
+    background-color: #F8F8F8;
+}
+.menu ul{
+    display: flex;
+}
+.menu >ul > li {
+    padding: 35px 12px;
+    position: relative;
+}
+.menu >ul> li:hover .sub-menu{
+    visibility: visible;
+    top: 85px;
+}
+.sub-menu{
+    position: absolute;
+    width: 800%;
+    border: 1px solid black;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 50px;
+    /* transition: 0.2s; */
+    background-color: white;
+    z-index: 1;
+}
+.list-submenu{
+    display: flex;
+}
+.item-list-submenu{
+    padding: 20px;
+}
+.menu >ul> li > a{
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+}
+.others ul{
+    display: flex;
+}
+.others >ul> li{
+    padding: 0px 12px;
+}
+.others >ul> li:first-child{
+    position: relative;
+}
+.others >ul> li:first-child input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+}
+.others >ul> li:first-child i{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+#Slider{
+    /* margin: 0px 200px; */
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+}
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.dot-container{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.dot.active{
+    background-color: #333;
+}
+.container{
+    margin: 0px 100px;
+}
+.cartegory-sach{
+    margin: 15px 0px 10px;
+    background-color: #FFFFFF;
+}
+.cartegory-sach-item{
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between
+}
+.cartegory-sach-item h1{
+    font-size:  18px;
+
+}
+.cartegory-sach-item > ul > li{
+    padding: 20px;
+}
+.cartegory-sach-item-contents{
+    justify-content: space-between; 
+}
+cartegory-sach-item-content{
+    width: calc(20% - 12px);
+}
+

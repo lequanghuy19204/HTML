@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #783535;
+}
+header {
+    background-color: #ae9e9e;
+    color: #000000;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+}
+
+div.dau{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+div.thu2{
+    width: 100%;
+    height: auto;
+}
+
+div.a{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 34px;
+
+}
+div.b{
+    position: absolute;
+    right: 200px;
+    top: 11px;
+    font-size: 28px;
+}
+
+div.img-web{
+    padding: 4px;
+    background-color: #fff;
+    margin: 10px;
+    width: 40%;
+    height: 250px;
+}
+div.img-web img{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+div.about{
+    padding: 4px;
+    background-color: #fff;
+    margin: 10px;
+    width: 55%;
+    height: 250px;
+}
+div.c{
+    background-color: rgb(133, 159, 156);
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+div.d{
+    font-family: 'Times New Roman', Times, serif;
+}
+div.about,div.img-web{
+    float: left;
+}
+
+.th2 div.chung1{
+    background-color: #fff;
+    width: 40%;
+
+}
+div.tieude{
+    background-color: rgb(133, 159, 156);
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.myheader{
+    grid-area: header;
+    background-color: darkgray;
+    padding: 30px;
+}
+.myhome{
+    grid-area: home;
+    background-color: blue;
+}
+.myimage{
+    grid-area: image;
+    background-color: goldenrod;
+    padding: 80px;
+}
+.myproduct{
+    grid-area: product;
+    background-color: forestgreen;
+}
+.myfooter{
+    grid-area: footer;
+    background-color: brown;
+    padding: 30px;
+}
+.home{
+    background-color: darkcyan;
+    padding: 10px;
+    border: 2px solid #000000;
+}
+.pro{
+    background-color: darkseagreen;
+    padding: 70px 30px;
+    border: 2px solid #000000;
+}
+.container, .myhome, .myproduct{
+    display: grid;
+}
+.container{
+    grid-template-areas: 'header''home''image''product''footer';
+    background-color: black;
+    padding: 2px;
+    gap: 2px;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.myhome{
+    grid-template-columns: auto auto auto auto;
+    padding: 20px;
+    gap: 10px;
+}
+.myproduct{
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    gap: 20px;
+}

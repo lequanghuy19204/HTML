@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Nguyên Tắc Cơ Bản Trong Đầu Tư</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="app">
+        <!-- navBar -->
+        <nav id="navbar" class="nav">
+            <i onclick="handleDarkMode()" id="toggleMobile" class="fas fa-moon fa-moon_mobile"></i>
+
+            <img onclick="window.location.href='index.html'" src="./assets/img/logo-new.png" alt="logo" class="logo" style="cursor: pointer" />
+            <div class="nav__menu">
+                <a id="navHome" href="./index.html">TRANG CHỦ</a>
+                <a id="navIntroduction" href="./profile.html">THÔNG TIN</a>
+                <a id="navShowtimes" href="./showtimes.html">TRUYỆN TRANH</a>
+                <a id="navNews" href="./news.html">SẮP XUẤT BẢN</a>
+                <a id="navPrice" href="./price.html">ƯU ĐÃI</a>
+                <a id="navPrice" href="./sitemap.html">SITEMAP</a>
+
+                <div class="nav__right">
+                    <div id="navRightUserInfor" style="display: flex; align-items: center; cursor: pointer"></div>
+                    <a href="login.html" id="loginNav">ĐĂNG NHẬP</a>
+                    <div class="gio-hang">
+                      <a href="cart.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a>
+                    </div>
+                </div>
+            </div>
+            <div id="navMobie" class="nav__mobie">
+                <div style="display: flex; flex-direction: column; align-items: center" onclick="window.location.replace('./profile.html')">
+                    <a id="navMobieUserName" style=" margin-top: 15px; font-size: 18px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Thành viên__</a>
+                </div>
+                <a href="./index.html">TRANG CHỦ</a>
+                <a href="./profile.html">GIỚI THIỆU</a>
+                <a href="./showtimes.html">TRUYỆN TRANH</a>
+                <a href="./news.html">SẮP XUẤT BẢN</a>
+                <a href="./price.html">ƯU ĐÃI</a>
+                <a id="navMobieAuth" href="./login.html">ĐĂNG NHẬP</a>
+            </div>
+            <div id="hamburger" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+<!-- homePage -->
+<div class="home">
+        <div id="slider" style="align-items: center; justify-content: center; text-align: center;">
+          <ul id="slideWrap ">
+            <li><img src="./assets/img/3b0cd6b3-3099-4c43-988f-595472a4488e.jpg" alt="" /></li>
+            <li><img src="./assets/img/33c79415-fe9b-4cbf-81b7-b091b5f2bbfa.jpg" alt="" /></li>
+            <li><img src="./assets/img/95ea3a7e-8d5c-4046-b1ad-676412ed9cd2.jpg" alt="" /></li>
+            <li><img src="./assets/img/9210ad11-08b5-4fae-a5fe-7556343ca9e9.jpg" alt="" /></li>
+          </ul>
+          <img src="./assets/svg/arrow.svg" alt="arrow" id="prev" />
+          <img src="./assets/svg/arrow.svg" alt="arrow" id="next" />
+        </div>
+
+<!-- product -->
+<section class="product">
+    <div class="container">
+        <div class="product-content row">
+            <div class="product-content-left">
+                <div class="product-content-left-img">
+                    <img src="./assets/img/sach9.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-content-right">
+                <div class="product-content-right-product-name">
+                    <h1>Nguyên Tắc Cơ Bản Trong Đầu Tư</h1>
+                    <p> <span>Gerard Do </span> (Tác giả)</p>
+                </div>
+                <div class="product-content-right-product-price">
+                    <p style="color: #FE642E; font-size: 24px;">169.000<sup>đ</sup></p>
+                    
+                </div>
+                <p>Tình trạng: <span style="color: red;">Sắp có hàng</span></p>
+                <div class="quantity">
+                    <p style="font-weight: bold;">Số lượng: </p>
+                    <input type="numbers" min="1" value="1">
+                    <p style="color: red;">Vui lòng chọn số lượng</p>
+                </div>
+                <div class="product-content-right-product-button-gio">
+                  <button><p>THÊM VÀO GIỎ HÀNG</p></button>
+                </div>
+                <div class="product-content-right-product-button-dat">
+                    <button onclick="datTruoc()"><p>ĐẶT TRƯỚC</p></button>
+                </div>
+                <div class="product-content-right-product-icon">
+                    <p>Gọi đặt hàng: <span style="color: #FE642E;">(028) 3820 7153</span> hoặc <span style="color: #FE642E;">0933 109 009</span>
+                    </p>
+                </div>
+                <div class="product-content-right-product-sale">
+                  <p style="font-weight: bold;">Thông tin & Khuyến mãi</p>
+                  <p>Đổi trả hàng trong vòng 7 ngày</p>
+                  <p>Freeship nội thành Sài Gòn từ <span>150.000đ*</span>.</p>
+                  <p>Freeship toàn quốc từ <span>250.000đ</span></p>
+                </div>
+            </div>
+        </div>
+    <div class="contents">
+      <div style="font-size: 22px; font-weight: bold; margin: 20px 10px;">
+        <p>Giới thiệu sản phẩm</p>
+      </div>
+      <p>&nbsp</p>
+      <div style="color: #FE642E; font-weight: bold; font-size: 25px; text-align: center; margin-bottom: 20px;">
+        <p> Nguyên Tắc Cơ Bản Trong Đầu Tư</p>
+      </div>
+      <div >
+        <p>Chào mừng bạn đến với cuốn sách "Nguyên tắc cơ bản trong đầu tư" của tác giả Gerard Do! Bạn muốn hiểu rõ hơn về cách thị trường hoạt động? Cuốn sách này sẽ giải đáp những câu hỏi đó cho bạn. Từ những phương pháp đầu tư hiệu quả đến các yếu tố rủi ro và biến động, bạn sẽ tìm thấy thông tin quý giá để đưa ra quyết định đầu tư thông minh.</p><br>
+        <p>Với 12 phần chuyên sâu, cuốn sách đưa bạn vào hành trình khám phá về tư duy độc lập, sự bất định và cách tận dụng sức mạnh của lãi kép. Bạn sẽ hiểu rõ hơn về cách xác định kỹ năng đầu tư và những nguyên tắc quan trọng trong đầu tư giống như chơi poker để học cách tấn công và phòng thủ đúng lúc.</p><br>
+        <p>Tuyệt vời hơn, cuốn sách còn tận mắt chứng kiến cách Phố Wall đã tạo nên khủng hoảng tài chính 2008-2009 và cách thao túng giá trên thị trường chứng khoán Việt Nam.</p><br>
+        <p>Dành thời gian đọc cuốn sách này để trở thành nhà đầu tư thông thái và tự tin hơn trong việc định hướng tài chính của bạn. Hãy sẵn sàng tạo ra những quyết định đầu tư thành công và đạt được mục tiêu tài chính của mình. Đặt mua ngay để khám phá và trau dồi kiến thức đầu tư bạn nhé!</p><br>
+        <p>Tác giả: Gerad Do Là chuyên gia trong lĩnh vực khởi nghiệp và phát triển doanh nghiệp, Gerard Do sẵn sàng chia sẻ những kiến thức và giải pháp đầu tư căn bản và tối ưu nhất cho những người mới chập chững bước vào con đường tìm hiểu thị trường chứng khoán.</p><br>
+        <p>Tốt nghiệp cử nhân Thương mại tại Đại học Sydney, Gerard Do từng là Quản lý của Hệ sinh thái Khởi nghiệp đổi mới tại Trung tâm Hỗ trợ khởi nghiệp sáng tạo Quốc gia, và là Quản lý Hệ sinh thái Khởi nghiệp tại Songhan Incubator.</p><br>
+        <p>Với sự kiến thức sâu rộng về kinh tế, đầu tư và tiếp thị, anh đã hỗ trợ, tư vấn và cung cấp sự hỗ trợ đúng lúc và chính xác cho các doanh nghiệp khởi nghiệp. Đồng thời, anh cũng đã xây dựng và phát triển hệ sinh thái khởi nghiệp kết nối với các tổ chức và cộng đồng khởi nghiệp với nhau.</p><br>
+      </div>
+    </div>
+    </div>
+</section>
+</div>
+
+<!-- footer -->
+<footer class="footer" id="footer">
+    <div class="footer__navList">
+      <span onclick="window.location.replace('./index.html')"
+        >TRANG CHỦ</span
+      >
+      <span onclick="window.location.replace('./showtimes.html')"
+        >TRUYỆN TRANH</span
+      >
+      <span onclick="window.location.replace('./news.html')"
+        >SẮP XUẤT BẢN</span
+      >
+      <span onclick="window.location.replace('./price.html')">ƯU ĐÃI</span>
+    </div>
+    <div class="footer__download">
+      <img src="./assets/img/downloadAppStore.png" alt="img" />
+      <img src="./assets/img/downloadGooglePlay.png" alt="img" />
+      <img
+        src="./assets/img/logo_da_thong_bao.png"
+        width="180px"
+        alt="img"
+      />
+    </div>
+    <p class="footer__text">
+      Mua sách online tại Bookbuy, bạn được tận hưởng chính sách hỗ trợ miễn phí đổi trả hàng, giao hàng nhanh – tận nơi – miễn phí*, thanh toán linh hoạt - an toàn, đặc biệt giảm thêm trên giá bán khi sử dụng BBxu giúp bạn mua sách online giá 0đ!<br />
+      Chỉ với 3 cú click chuột, chưa bao giờ trải nghiệm mua sách online lại dễ chịu và nhẹ nhàng như vậy. Còn chần chờ gì nữa, đặt mua ngay những tựa sách hay cùng hàng ngàn sản phẩm chất lượng khác tại Bookbuy.vn<br />
+    </p>
+    <div class="footer__logo">
+      <img src="./assets/img/logo-new.png" width="100px" alt="logo" />
+      <img
+        src="./assets/img/Facebook.png"
+        onclick="window.open()"
+        alt="logo"
+      />
+      <img src="./assets/img/Gmail.png" alt="logo" />
+    </div>
+  </footer>
+
+  <script>
+    function datTruoc(){
+      alert('Sắp có hàng, vui lòng đợi!');
+    }
+  </script>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/autoSlide.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/profile.js"></script>
+</body>
+</html>
